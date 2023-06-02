@@ -1,0 +1,19 @@
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\Bus Ticketing.exe.config
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\Bus Ticketing.exe
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\Bus Ticketing.pdb
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.csproj.AssemblyReference.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.csproj.SuggestedBindingRedirects.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Properties.Resources.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.csproj.GenerateResource.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.csproj.CoreCompileInputs.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.exe
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.pdb
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\Guna.UI2.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus Ticketing.csproj.CopyComplete
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.loginForm.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.SignUpForm.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Book.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Home.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Receipt.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Tickets.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\MySql.Data.dll
