@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Bus_Ticketing
 {
@@ -62,6 +64,38 @@ namespace Bus_Ticketing
         private void defaultCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlCommand SelectCommand = new MySqlCommand("Select * from bus_data.user_info where email='" + this.guna2TextBox1.Text + "' and password='" + this.guna2TextBox2.Text + "';", myConn);
+                MySqlDataReader myReader;
+                myConn.Open();
+                myReader = SelectCommand.ExecuteReader();
+
+                int count = 0;
+                while (myReader.Read()) {
+                    count = count + 1;
+                }
+                if(count == 1) {
+                    MessageBox.Show("Username and password is correct!");
+
+                    Home goHome = new Home();
+                    goHome.ShowDialog();
+
+                } else if (count > 1) {
+                    MessageBox.Show("Duplicate username and password. Access not granted!");
+                } else {
+                    MessageBox.Show("Username and Password are not correct. Try again!");
+                    myConn.Close();
+                }
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

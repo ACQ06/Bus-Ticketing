@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Bus_Ticketing
 {
@@ -61,6 +62,21 @@ namespace Bus_Ticketing
         private void defaultCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand InsertCommand = myConn.CreateCommand();
+            InsertCommand.CommandText = "INSERT INTO bus_data.user_info(fullname,email,password)VALUES ('" + guna2TextBox3.Text + "','" + guna2TextBox1.Text + "','" + guna2TextBox2.Text + "')";
+            myConn.Open();
+            InsertCommand.ExecuteNonQuery();
+            MessageBox.Show("Record Saved!");
+            myConn.Close();
+
+            loginForm login = new loginForm();
+            login.ShowDialog();
         }
     }
 }

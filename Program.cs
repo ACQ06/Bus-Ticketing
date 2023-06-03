@@ -17,7 +17,7 @@ namespace Bus_Ticketing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new SignUpForm());
         }
     }
 }

@@ -17,3 +17,32 @@ D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug
 D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Receipt.resources
 D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\obj\Debug\Bus_Ticketing.Tickets.resources
 D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\Bus Ticketing\bin\Debug\MySql.Data.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Bus Ticketing.exe.config
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Bus Ticketing.exe
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Bus Ticketing.pdb
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Guna.UI2.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\MySql.Data.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Google.Protobuf.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\ZstdNet.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\System.Buffers.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\user\Source\Repos\Bus-Ticketing\bin\Debug\MySql.Data.xml
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.AssemblyReference.cache
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.exe.config
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.Book.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.Home.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.loginForm.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.SignUpForm.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.Properties.Resources.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.Receipt.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus_Ticketing.Tickets.resources
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.GenerateResource.cache
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CopyComplete
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.exe
+C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.pdb
