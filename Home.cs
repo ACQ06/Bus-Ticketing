@@ -62,5 +62,18 @@ namespace Bus_Ticketing
         {
             Cursor = Cursors.Default;
         }
+
+        private void ticketsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tickets tickets = new Tickets();
+            tickets.Show();
+        }
+
+        private void bookButton_Click(object sender, EventArgs e)
+        {
+            Book book = new Book();
+            book.ShowDialog();
+        }
     }
 }

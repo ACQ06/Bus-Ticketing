@@ -20,6 +20,7 @@ namespace Bus_Ticketing
         //CUSTOM CONTROL BAR BELOW
         private Point lastMousePosition;
         private bool isDragging;
+
         private void controlbar_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -61,6 +62,20 @@ namespace Bus_Ticketing
         private void defaultCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
+
+        private void bookButton_Click(object sender, EventArgs e)
+        {
+            Book book = new Book();
+            book.ShowDialog();
         }
     }
 }

@@ -63,5 +63,23 @@ namespace Bus_Ticketing
         {
             Cursor = Cursors.Default;
         }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            Receipt receipt = new Receipt();
+            receipt.ShowDialog();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.ShowDialog();
+        }
+
+        private void ticketsButton_Click(object sender, EventArgs e)
+        {
+            Tickets tickets = new Tickets();
+            tickets.ShowDialog();
+        }
     }
 }
