@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -64,17 +65,62 @@ namespace Bus_Ticketing
             Cursor = Cursors.Default;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void signUpButton_Click(object sender, EventArgs e)
         {
-            string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
-            MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand InsertCommand = myConn.CreateCommand();
-            InsertCommand.CommandText = "INSERT INTO bus_data.user_info(fullname,email,password)VALUES ('" + guna2TextBox3.Text + "','" + guna2TextBox1.Text + "','" + guna2TextBox2.Text + "')";
-            myConn.Open();
-            InsertCommand.ExecuteNonQuery();
-            MessageBox.Show("Record Saved!");
-            myConn.Close();
+            string namePattern = @"[A-Za-z]";
+            string emailPattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            string passwordPattern = namePattern;
 
+            string fullname = fullnameInput.Text;
+            string email = emailInput.Text;
+            string password = passwordInput.Text;
+
+            if (!Regex.IsMatch(fullname[0].ToString(), namePattern))
+            {
+                MessageBox.Show("Enter the right name");
+                return;
+            }
+
+            if (!Regex.IsMatch(email, emailPattern))
+            {
+                MessageBox.Show("Enter the right email");
+                return;
+            }
+
+            if (!Regex.IsMatch(password, passwordPattern))
+            {
+                MessageBox.Show("Complete the password");
+                return;
+            }
+
+            try
+            {
+                string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlCommand InsertCommand = myConn.CreateCommand();
+                InsertCommand.CommandText = "INSERT INTO bus_data.user_info(fullname,email,password)VALUES ('" + fullname + "','" + email + "','" + password + "')";
+                myConn.Open();
+                InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("Record Saved!");
+                myConn.Close();
+
+                fullnameInput.Clear();
+                emailInput.Clear();
+                passwordInput.Clear();
+
+                loginForm login = new loginForm();
+                login.ShowDialog();
+            }
+
+            catch (Exception s)
+            {
+                MessageBox.Show(s.Message);
+            }
+            
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
             loginForm login = new loginForm();
             login.ShowDialog();
         }

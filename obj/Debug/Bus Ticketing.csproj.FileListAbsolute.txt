@@ -46,3 +46,31 @@ C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CoreComp
 C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CopyComplete
 C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.exe
 C:\Users\user\Source\Repos\Bus-Ticketing\obj\Debug\Bus Ticketing.pdb
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Bus Ticketing.exe.config
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Bus Ticketing.exe
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Bus Ticketing.pdb
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Guna.UI2.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Google.Protobuf.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\ZstdNet.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\BouncyCastle.Crypto.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\Ubiety.Dns.Core.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\System.Buffers.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\K4os.Compression.LZ4.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\K4os.Hash.xxHash.dll
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\bin\Debug\MySql.Data.xml
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.AssemblyReference.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.SuggestedBindingRedirects.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.exe.config
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.Book.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.Home.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.loginForm.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.SignUpForm.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.Properties.Resources.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.Receipt.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus_Ticketing.Tickets.resources
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.GenerateResource.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CoreCompileInputs.cache
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.csproj.CopyComplete
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.exe
+D:\Alven - School works\2ND YEAR\2ND SEM\Oop\Programming\PROJECT\Bus-Ticketing\obj\Debug\Bus Ticketing.pdb

@@ -70,9 +70,10 @@
             this.ticketsButton = new Guna.UI2.WinForms.Guna2Button();
             this.homeButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
@@ -125,6 +126,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.guna2DateTimePicker1);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.payButton);
@@ -453,7 +455,7 @@
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(28, 213);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(734, 57);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(421, 57);
             this.guna2CustomGradientPanel2.TabIndex = 17;
             // 
             // guna2RadioButton1
@@ -467,7 +469,7 @@
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
             this.guna2RadioButton1.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
             this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(225, 11);
+            this.guna2RadioButton1.Location = new System.Drawing.Point(134, 11);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.Size = new System.Drawing.Size(48, 35);
             this.guna2RadioButton1.TabIndex = 13;
@@ -501,7 +503,7 @@
             this.guna2RadioButton3.CheckedState.InnerOffset = -4;
             this.guna2RadioButton3.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2RadioButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(365, 11);
+            this.guna2RadioButton3.Location = new System.Drawing.Point(274, 11);
             this.guna2RadioButton3.Name = "guna2RadioButton3";
             this.guna2RadioButton3.Size = new System.Drawing.Size(48, 35);
             this.guna2RadioButton3.TabIndex = 15;
@@ -523,7 +525,7 @@
             this.guna2RadioButton4.CheckedState.InnerOffset = -4;
             this.guna2RadioButton4.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2RadioButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton4.Location = new System.Drawing.Point(435, 11);
+            this.guna2RadioButton4.Location = new System.Drawing.Point(344, 11);
             this.guna2RadioButton4.Name = "guna2RadioButton4";
             this.guna2RadioButton4.Size = new System.Drawing.Size(48, 35);
             this.guna2RadioButton4.TabIndex = 16;
@@ -545,7 +547,7 @@
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
             this.guna2RadioButton2.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2RadioButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(295, 11);
+            this.guna2RadioButton2.Location = new System.Drawing.Point(204, 11);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.Size = new System.Drawing.Size(48, 35);
             this.guna2RadioButton2.TabIndex = 14;
@@ -634,7 +636,7 @@
             this.panel1.Controls.Add(this.ticketsButton);
             this.panel1.Controls.Add(this.homeButton);
             this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.signOutButton);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -745,24 +747,25 @@
             this.guna2Button4.TabIndex = 17;
             this.guna2Button4.Text = "Book";
             // 
-            // guna2Button3
+            // signOutButton
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2Button3.BorderRadius = 3;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.Location = new System.Drawing.Point(12, 678);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(221, 37);
-            this.guna2Button3.TabIndex = 16;
-            this.guna2Button3.Text = "Sign Out";
+            this.signOutButton.Animated = true;
+            this.signOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.signOutButton.BorderRadius = 3;
+            this.signOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.signOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.signOutButton.FillColor = System.Drawing.Color.Transparent;
+            this.signOutButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
+            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
+            this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.Location = new System.Drawing.Point(12, 678);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(221, 37);
+            this.signOutButton.TabIndex = 16;
+            this.signOutButton.Text = "Sign Out";
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // panel4
             // 
@@ -779,6 +782,22 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.BorderRadius = 25;
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Courier New", 11.25F);
+            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(473, 213);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(289, 57);
+            this.guna2DateTimePicker1.TabIndex = 39;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 6, 3, 22, 36, 44, 687);
             // 
             // Book
             // 
@@ -822,7 +841,7 @@
         private Guna.UI2.WinForms.Guna2Button ticketsButton;
         private Guna.UI2.WinForms.Guna2Button homeButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button signOutButton;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
@@ -854,5 +873,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
         private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
     }
 }

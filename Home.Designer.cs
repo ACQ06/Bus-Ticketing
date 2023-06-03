@@ -58,11 +58,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fullnameText = new System.Windows.Forms.Label();
             this.ticketsButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.bookButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2.SuspendLayout();
@@ -389,7 +389,7 @@
             this.panel1.Controls.Add(this.ticketsButton);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.bookButton);
-            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.signOutButton);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -401,25 +401,25 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.fullnameText);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(12, 49);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(221, 37);
             this.panel5.TabIndex = 13;
             // 
-            // label2
+            // fullnameText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(0, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Alven Questeria";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fullnameText.AutoSize = true;
+            this.fullnameText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fullnameText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnameText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fullnameText.Location = new System.Drawing.Point(0, 17);
+            this.fullnameText.Name = "fullnameText";
+            this.fullnameText.Size = new System.Drawing.Size(44, 17);
+            this.fullnameText.TabIndex = 13;
+            this.fullnameText.Text = "User";
+            this.fullnameText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ticketsButton
             // 
@@ -487,24 +487,25 @@
             this.bookButton.Text = "Book";
             this.bookButton.Click += new System.EventHandler(this.bookButton_Click);
             // 
-            // guna2Button3
+            // signOutButton
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2Button3.BorderRadius = 3;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.Location = new System.Drawing.Point(12, 678);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(221, 37);
-            this.guna2Button3.TabIndex = 16;
-            this.guna2Button3.Text = "Sign Out";
+            this.signOutButton.Animated = true;
+            this.signOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.signOutButton.BorderRadius = 3;
+            this.signOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.signOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.signOutButton.FillColor = System.Drawing.Color.Transparent;
+            this.signOutButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
+            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
+            this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.Location = new System.Drawing.Point(12, 678);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(221, 37);
+            this.signOutButton.TabIndex = 16;
+            this.signOutButton.Text = "Sign Out";
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // panel4
             // 
@@ -535,6 +536,7 @@
             this.Name = "Home";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -563,9 +565,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label fullnameText;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button signOutButton;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button bookButton;
         private System.Windows.Forms.Panel upcomingPanel;

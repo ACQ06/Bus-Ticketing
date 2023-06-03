@@ -77,5 +77,11 @@ namespace Bus_Ticketing
             Book book = new Book();
             book.ShowDialog();
         }
+
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            userUtils.fullname = "";
+            userUtils.id = 0;
+        }
     }
 }

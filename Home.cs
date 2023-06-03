@@ -12,6 +12,7 @@ namespace Bus_Ticketing
 {
     public partial class Home : Form
     {
+        
         public Home()
         {
             InitializeComponent();
@@ -74,6 +75,17 @@ namespace Bus_Ticketing
         {
             Book book = new Book();
             book.ShowDialog();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            
+            fullnameText.Text = userUtils.fullname;
+        }
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            userUtils.fullname = "";
+            userUtils.id = 0;
         }
     }
 }

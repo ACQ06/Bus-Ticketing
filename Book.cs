@@ -81,5 +81,10 @@ namespace Bus_Ticketing
             Tickets tickets = new Tickets();
             tickets.ShowDialog();
         }
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            userUtils.fullname = "";
+            userUtils.id = 0;
+        }
     }
 }

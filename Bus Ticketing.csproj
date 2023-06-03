@@ -93,6 +93,7 @@
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="userUtils.cs" />
     <EmbeddedResource Include="Book.resx">
       <DependentUpon>Book.cs</DependentUpon>
     </EmbeddedResource>

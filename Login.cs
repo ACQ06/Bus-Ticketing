@@ -72,18 +72,25 @@ namespace Bus_Ticketing
             {
                 string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
-                MySqlCommand SelectCommand = new MySqlCommand("Select * from bus_data.user_info where email='" + this.guna2TextBox1.Text + "' and password='" + this.guna2TextBox2.Text + "';", myConn);
+                MySqlCommand SelectCommand = new MySqlCommand("Select * from bus_data.user_info where email='" + this.emailInput.Text + "' and password='" + this.passwordInput.Text + "';", myConn);
                 MySqlDataReader myReader;
                 myConn.Open();
                 myReader = SelectCommand.ExecuteReader();
 
                 int count = 0;
-                while (myReader.Read()) {
+                while (myReader.Read()){
                     count = count + 1;
                 }
+
                 if(count == 1) {
                     MessageBox.Show("Username and password is correct!");
 
+                    emailInput.Clear();
+                    passwordInput.Clear();
+
+                    userUtils.id = int.Parse(myReader.GetValue(0).ToString());
+                    userUtils.fullname = myReader.GetValue(1).ToString();
+                    
                     Home goHome = new Home();
                     goHome.ShowDialog();
 
@@ -96,6 +103,12 @@ namespace Bus_Ticketing
             } catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void signUpButton_Click(object sender, EventArgs e)
+        {
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.ShowDialog();
         }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tickets));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.bookButton = new Guna.UI2.WinForms.Guna2Button();
             this.homeButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -84,24 +84,25 @@
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseMove);
             this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseUp);
             // 
-            // guna2Button3
+            // signOutButton
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2Button3.BorderRadius = 3;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.Location = new System.Drawing.Point(12, 678);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(221, 37);
-            this.guna2Button3.TabIndex = 16;
-            this.guna2Button3.Text = "Sign Out";
+            this.signOutButton.Animated = true;
+            this.signOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.signOutButton.BorderRadius = 3;
+            this.signOutButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.signOutButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.signOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.signOutButton.FillColor = System.Drawing.Color.Transparent;
+            this.signOutButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
+            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
+            this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.Location = new System.Drawing.Point(12, 678);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(221, 37);
+            this.signOutButton.TabIndex = 16;
+            this.signOutButton.Text = "Sign Out";
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // bookButton
             // 
@@ -211,7 +212,7 @@
             this.panel1.Controls.Add(this.guna2Button2);
             this.panel1.Controls.Add(this.homeButton);
             this.panel1.Controls.Add(this.bookButton);
-            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.signOutButton);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -517,7 +518,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button signOutButton;
         private Guna.UI2.WinForms.Guna2Button bookButton;
         private Guna.UI2.WinForms.Guna2Button homeButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
