@@ -35,6 +35,8 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.controlNumberLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.insuranceText = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.taxText = new System.Windows.Forms.Label();
             this.discountText = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.insuranceText = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -174,6 +174,28 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(658, 460);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // insuranceText
+            // 
+            this.insuranceText.AutoSize = true;
+            this.insuranceText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.insuranceText.Location = new System.Drawing.Point(127, 82);
+            this.insuranceText.Name = "insuranceText";
+            this.insuranceText.Size = new System.Drawing.Size(140, 23);
+            this.insuranceText.TabIndex = 62;
+            this.insuranceText.Text = "True/False";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label2.Location = new System.Drawing.Point(23, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Insurance:";
             // 
             // taxText
             // 
@@ -623,28 +645,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(23, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Insurance:";
-            // 
-            // insuranceText
-            // 
-            this.insuranceText.AutoSize = true;
-            this.insuranceText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.insuranceText.Location = new System.Drawing.Point(127, 82);
-            this.insuranceText.Name = "insuranceText";
-            this.insuranceText.Size = new System.Drawing.Size(140, 23);
-            this.insuranceText.TabIndex = 62;
-            this.insuranceText.Text = "True/False";
             // 
             // Receipt
             // 

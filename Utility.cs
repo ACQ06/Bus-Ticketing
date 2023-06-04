@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -131,27 +132,182 @@ namespace Bus_Ticketing
     {
         //GET THE PASSENGER DETAILS FROM THE SQL USING THE USERID AND CONTROL NUMBER AS A FILTER FOR SQL LOOKUP
         //NOTE: IT SHOULD BE PER PASSENGER
-        public static double computeBusFee(string From, string To)
+        public static double computeBusFee(string From, string To, char busType)
         {
             double busFee = 0;
+
+            if (From == "Manila")
+            {
+                switch (To)
+                {
+                    case "Ilocos":
+                        switch (busType)
+                        {
+                            case 'A':
+                                busFee = 950;
+                                break;
+                            case 'D':
+                                busFee = 1100;
+                                break;
+                        }
+                        break;
+
+                    case "Pampanga":
+                        switch (busType)
+                        {
+                            case 'B':
+                                busFee = 400;
+                                break;
+                            case 'C':
+                                busFee = 375;
+                                break;
+                            case 'D':
+                                busFee = 600;
+                                break;
+                        }
+                        break;
+
+                    case "Zambales":
+
+                        busFee = 390;
+                        break;
+
+                    case "Baguio":
+                        switch (busType)
+                        {
+                            case 'A':
+                                busFee = 785;
+                                break;
+                            case 'C':
+                                busFee = 400;
+                                break;
+                            case 'D':
+                                busFee = 788;
+                                break;
+                        }
+                        break;
+
+                    case "Tugegarao":
+                        switch (busType)
+                        {
+                            case 'A':
+                                busFee = 1300;
+                                break;
+                            case 'B':
+                                busFee = 975;
+                                break;
+                        }
+                        break;
+                }
+            } else if (From == "Ilocos") {
+                switch (busType)
+                {
+                    case 'A':
+                        busFee = 995;
+                        break;
+                    case 'D':
+                        busFee = 1350;
+                        break;
+                }
+            } else if (From == "Pampanga") {
+                switch (busType)
+                {
+                    case 'B':
+                        busFee = 450;
+                        break;
+                    case 'C':
+                        busFee = 400;
+                        break;
+                    case 'D':
+                        busFee = 700;
+                        break;
+                }
+            } else if (From == "Zambales") {
+                busFee = 430;
+            } else if (From == "Baguio") {
+                switch (busType)
+                {
+                    case 'A':
+                        busFee = 830;
+                        break;
+                    case 'C':
+                        busFee = 430;
+                        break;
+                    case 'D':
+                        busFee = 840;
+                        break;
+                }
+            } else if (From == "Tugegarao") {
+                switch (busType)
+                {
+                    case 'A':
+                        busFee = 1340;
+                        break;
+                    case 'B':
+                        busFee = 1000;
+                        break;
+                }
+            }
+
+
             return busFee;
         }
 
-        public static double computeStandardProcessingFee()
+        public static double computeStandardProcessingFee(string From, string To, char busType)
         {
-            double standardProcessingFee = 0;
+            double standardProcessingFee = 85;
             return standardProcessingFee;
         }
 
-        public static double computeAdditionalProcessingFee()
+        public static double computeAdditionalProcessingFee(char busType)
         {
             double additionalProcessingFee = 0;
+
+            switch (busType)
+            {
+                case 'A':
+                    additionalProcessingFee = 30;
+                    break;
+
+                case 'B':
+                    additionalProcessingFee = 20;
+                    break;
+
+                case 'C':
+                    additionalProcessingFee = 15;
+                    break;
+
+                case 'D':
+                    additionalProcessingFee = 10;
+                    break;
+            }
             return additionalProcessingFee;
         }
 
-        public static double computeInsuranceFee()
+        public static double computeInsuranceFee(char busType)
         {
             double insuranceFee = 0;
+
+            switch (busType)
+            {
+                case 'A':
+                    insuranceFee = 195;
+                    break;
+
+                case 'B':
+                    insuranceFee = 140;
+                    break;
+
+                case 'C':
+                    insuranceFee = 95;
+                    break;
+
+                case 'D':
+                    insuranceFee = 50;
+                    break;
+            }
+
+
             return insuranceFee;
         }
 
