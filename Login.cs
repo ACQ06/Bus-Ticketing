@@ -66,7 +66,7 @@ namespace Bus_Ticketing
             Cursor = Cursors.Default;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -88,11 +88,11 @@ namespace Bus_Ticketing
                     emailInput.Clear();
                     passwordInput.Clear();
 
-                    userUtils.id = int.Parse(myReader.GetValue(0).ToString());
-                    userUtils.fullname = myReader.GetValue(1).ToString();
-                    
-                    Home goHome = new Home();
-                    goHome.ShowDialog();
+                    utility.id = int.Parse(myReader.GetValue(0).ToString());
+                    utility.fullname = myReader.GetValue(1).ToString();
+
+                    FormManager.ShowForm(FormManager.home);
+                    FormManager.HideForm(FormManager.login);
 
                 } else if (count > 1) {
                     MessageBox.Show("Duplicate username and password. Access not granted!");
@@ -107,8 +107,18 @@ namespace Bus_Ticketing
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            SignUpForm signUpForm = new SignUpForm();
-            signUpForm.ShowDialog();
+            FormManager.ShowForm(FormManager.signUp);
+            FormManager.HideForm(FormManager.login);
+        }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+            FormManager.login = this;
+            FormManager.signUp = new SignUpForm();
+            FormManager.home = new Home();
+            FormManager.book = new Book();
+            FormManager.tickets = new Tickets();
+            FormManager.receipt = new Receipt();
         }
     }
 }

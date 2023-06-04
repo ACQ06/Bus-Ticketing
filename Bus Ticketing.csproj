@@ -61,6 +61,7 @@
     <Compile Include="Book.Designer.cs">
       <DependentUpon>Book.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManager.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,7 +94,7 @@
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
-    <Compile Include="userUtils.cs" />
+    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Book.resx">
       <DependentUpon>Book.cs</DependentUpon>
     </EmbeddedResource>

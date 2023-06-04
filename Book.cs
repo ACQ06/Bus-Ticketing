@@ -66,25 +66,41 @@ namespace Bus_Ticketing
 
         private void payButton_Click(object sender, EventArgs e)
         {
-            Receipt receipt = new Receipt();
-            receipt.ShowDialog();
+            FormManager.ShowForm(FormManager.receipt);
+            FormManager.HideForm(FormManager.book);
         }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.ShowDialog();
+            FormManager.ShowForm(FormManager.home);
+            FormManager.HideForm(FormManager.book);
         }
 
         private void ticketsButton_Click(object sender, EventArgs e)
         {
-            Tickets tickets = new Tickets();
-            tickets.ShowDialog();
+            FormManager.ShowForm(FormManager.tickets);
+            FormManager.HideForm(FormManager.book);
         }
         private void signOutButton_Click(object sender, EventArgs e)
         {
-            userUtils.fullname = "";
-            userUtils.id = 0;
+            User.fullname = "";
+            User.id = 0;
+            FormManager.ShowForm(FormManager.login);
+            FormManager.HideForm(FormManager.book);
+        }
+
+        private void Book_Load(object sender, EventArgs e)
+        {
+            fullnameText.Text = User.fullname;
+            
+            Passenger.controlNumber = ControlNumber.generate();
+            Transaction transaction = new Transaction
+            {
+                transaction = new Dictionary<string, object>
+                {
+                    { Passenger.controlNumber, null }
+                }
+            };
         }
     }
 }

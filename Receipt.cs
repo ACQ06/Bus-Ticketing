@@ -62,5 +62,36 @@ namespace Bus_Ticketing
         {
             Cursor = Cursors.Default;
         }
+
+        private void Receipt_Load(object sender, EventArgs e)
+        {
+            fullnameText.Text = utility.fullname;
+        }
+
+        private void bookButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ShowForm(FormManager.book);
+            FormManager.HideForm(FormManager.receipt);
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ShowForm(FormManager.home);
+            FormManager.HideForm(FormManager.receipt);
+        }
+
+        private void ticketButton_Click(object sender, EventArgs e)
+        {
+            FormManager.ShowForm(FormManager.tickets);
+            FormManager.HideForm(FormManager.receipt);
+        }
+
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            utility.fullname = "";
+            utility.id = 0;
+            FormManager.ShowForm(FormManager.login);
+            FormManager.HideForm(FormManager.tickets);
+        }
     }
 }

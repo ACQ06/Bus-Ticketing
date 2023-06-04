@@ -36,7 +36,7 @@
             this.homeButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fullnameText = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -173,25 +173,25 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.fullnameText);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(12, 49);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(221, 37);
             this.panel5.TabIndex = 13;
             // 
-            // label2
+            // fullnameText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(0, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Alven Questeria";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fullnameText.AutoSize = true;
+            this.fullnameText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fullnameText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullnameText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fullnameText.Location = new System.Drawing.Point(0, 17);
+            this.fullnameText.Name = "fullnameText";
+            this.fullnameText.Size = new System.Drawing.Size(44, 17);
+            this.fullnameText.TabIndex = 13;
+            this.fullnameText.Text = "User";
+            this.fullnameText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -496,6 +496,7 @@
             this.Name = "Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tickets";
+            this.Load += new System.EventHandler(this.Tickets_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -523,7 +524,7 @@
         private Guna.UI2.WinForms.Guna2Button homeButton;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label fullnameText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;

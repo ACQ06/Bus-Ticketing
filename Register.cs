@@ -108,8 +108,9 @@ namespace Bus_Ticketing
                 emailInput.Clear();
                 passwordInput.Clear();
 
-                loginForm login = new loginForm();
-                login.ShowDialog();
+                loginForm login = (loginForm)this.Owner;
+                login.Show();
+                this.Close();
             }
 
             catch (Exception s)
@@ -121,8 +122,8 @@ namespace Bus_Ticketing
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            loginForm login = new loginForm();
-            login.ShowDialog();
+            FormManager.ShowForm(FormManager.login);
+            FormManager.HideForm(FormManager.signUp);
         }
     }
 }

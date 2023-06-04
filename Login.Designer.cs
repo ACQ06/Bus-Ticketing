@@ -45,7 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.loginButton = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.loginButton);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
@@ -267,24 +267,24 @@
             this.label1.Text = "Welcome Back!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2Button1
+            // loginButton
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 348);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(402, 45);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Login";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.loginButton.Animated = true;
+            this.loginButton.BackColor = System.Drawing.Color.Transparent;
+            this.loginButton.BorderRadius = 5;
+            this.loginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.loginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.loginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.loginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.loginButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.Location = new System.Drawing.Point(12, 348);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(402, 45);
+            this.loginButton.TabIndex = 6;
+            this.loginButton.Text = "Login";
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // label2
             // 
@@ -335,6 +335,7 @@
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.loginForm_Load);
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -350,7 +351,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button loginButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
