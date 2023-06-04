@@ -80,7 +80,6 @@ namespace Bus_Ticketing
                 { Passenger.controlNumber, allPassenger }
             };
 
-
             foreach (KeyValuePair<string, List<Passenger>> kvp in transaction)
             {
                 string key = kvp.Key;
@@ -88,40 +87,35 @@ namespace Bus_Ticketing
 
                 foreach (Passenger passenger in passengers)
                 {
-                    MessageBox.Show(passenger.showInfos());
+                    try
+                    {
+                        string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
+                        MySqlConnection myConn = new MySqlConnection(myConnection);
+                        MySqlCommand InsertCommand = myConn.CreateCommand();
+                        InsertCommand.CommandText = "" +
+                            "INSERT INTO bus_data.transaction_info(userid,ctrlNumber,class,`to`,`from`,date,roundtrip,insurance,lastname,firstname,mi,alias,age)" +
+                            $"VALUES ('{User.id}','{Passenger.controlNumber}','{passenger.Class_}','{passenger.To}','{passenger.From}','{passenger.Date}','{passenger.IsRoundtrip}','{passenger.IsInsurance}','{passenger.Lastname}','{passenger.Firstname}','{passenger.MiddleInitial}','{passenger.Alias}','{passenger.Age}')";
+                        myConn.Open();
+                        InsertCommand.ExecuteNonQuery();
+                        myConn.Close();
+                    }
+
+                    catch (Exception s)
+                    {
+                        MessageBox.Show(s.Message);
+                    }
                 }
             }
-
-            //DB CONNECTION TO INSERT
-
-            //try
-            //{
-            //    string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
-            //    MySqlConnection myConn = new MySqlConnection(myConnection);
-            //    MySqlCommand InsertCommand = myConn.CreateCommand();
-            //    InsertCommand.CommandText = "INSERT INTO bus_data.transaction_info(userid,ctrlNumber,class,to,from,date,,roundtrip,insurance,)VALUES ('" + fullname + "','" + email + "','" + password + "')";
-            //    myConn.Open();
-            //    InsertCommand.ExecuteNonQuery();
-            //    MessageBox.Show("Record Saved!");
-            //    myConn.Close();
-            //}
-
-            //catch (Exception s)
-            //{
-            //    MessageBox.Show(s.Message);
-            //}
 
             FormManager.ShowForm(FormManager.receipt);
             FormManager.HideForm(FormManager.book);
 
         }
-
         private void homeButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.home);
             FormManager.HideForm(FormManager.book);
         }
-
         private void ticketsButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.tickets);
@@ -134,57 +128,115 @@ namespace Bus_Ticketing
             FormManager.ShowForm(FormManager.login);
             FormManager.HideForm(FormManager.book);
         }
-
         private void Book_Load(object sender, EventArgs e)
         {
             fullnameText.Text = User.fullname;
             Passenger.controlNumber = ControlNumber.generate();
         }
-
         private void fromInput_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (fromInput.Text == "Select from choices")
+            {
+                fromInput.SelectedIndexChanged -= fromInput_SelectedIndexChanged;
+                resetChoices();
+                fromInput.SelectedIndexChanged += fromInput_SelectedIndexChanged;
+                return;
+            }
             passenger.From = fromInput.Text;
-        }
+            List<string> removeChoice = getDestination(fromInput.Text);
 
+            foreach (string items in removeChoice) toInput.Items.Remove(items);
+        }
         private void toInput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            passenger.To = toInput.Text;
-        }
+            if (toInput.Text == "Select from choices")
+            {
+                toInput.SelectedIndexChanged -= toInput_SelectedIndexChanged;
+                resetChoices();
+                toInput.SelectedIndexChanged += toInput_SelectedIndexChanged;
+                return;
+            }
 
+            passenger.To = toInput.Text;
+            List<string> removeChoice = getDestination(toInput.Text);
+
+            foreach(string items in removeChoice) fromInput.Items.Remove(items);
+        }
+        public void resetChoices()
+        {
+            List<string> choices = new List<string>()
+            {
+                "Select from choices",
+                "Manila",
+                "Ilocos",
+                "Pampanga",
+                "Zambales",
+                "Baguio",
+                "Tugegarao"
+            };
+
+            toInput.Items.Clear();
+            fromInput.Items.Clear();
+
+            foreach (string items in choices)
+            {
+                toInput.Items.Add(items);
+                fromInput.Items.Add(items);
+            }
+
+            toInput.SelectedIndex = 0;
+            fromInput.SelectedIndex = 0;
+
+        }
+        public static List<string> getDestination(string current)
+        {
+            List<string> destinations = new List<string>()
+            {
+                "Manila",
+                "Ilocos",
+                "Pampanga",
+                "Zambales",
+                "Baguio",
+                "Tugegarao"
+            };
+
+            if (current == "Manila")
+            {
+                return new List<string> { "Manila" };
+            }
+
+            destinations.Remove("Manila");
+
+            return destinations;
+        }
         private void classA_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'A';
             hasClass = true;
         }
-
         private void classB_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'B';
             hasClass = true;
         }
-
         private void classC_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'C';
             hasClass = true;
         }
-
         private void classD_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'D';
             hasClass = true;
         }
-
         private void roundtripInput_CheckedChanged(object sender, EventArgs e)
         {
             passenger.IsRoundtrip = roundtripInput.Checked;
         }
-
         private void insuranceInput_CheckedChanged(object sender, EventArgs e)
         {
             passenger.IsInsurance = insuranceInput.Checked;
         }
-
         private void addButton_Click(object sender, EventArgs e)
         {
 
@@ -207,8 +259,7 @@ namespace Bus_Ticketing
         }
         public void resetInfos()
         {
-            fromInput.SelectedIndex = -1;
-            toInput.SelectedIndex = -1;
+            resetChoices();
             classA.Checked = false;
             classB.Checked = false;
             classC.Checked = false;
@@ -223,7 +274,7 @@ namespace Bus_Ticketing
         }
         public bool isCompleteForm()
         {
-            if (fromInput.SelectedIndex == -1 || toInput.SelectedIndex == -1)
+            if (fromInput.SelectedIndex <= 0 || toInput.SelectedIndex <= 0)
             {
                 return false;
             }
@@ -248,16 +299,10 @@ namespace Bus_Ticketing
                 return false;
             }
 
-            if (string.IsNullOrEmpty(aliasInput.Text))
-            {
-                return false;
-            }
-
             if (string.IsNullOrEmpty(ageInput.Text))
             {
                 return false;
             }
-
             return true;
         }
     }

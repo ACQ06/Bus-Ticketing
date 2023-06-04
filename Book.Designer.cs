@@ -618,9 +618,18 @@
             this.toInput.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.toInput.ItemHeight = 30;
+            this.toInput.Items.AddRange(new object[] {
+            "Select from choices",
+            "Manila",
+            "Ilocos",
+            "Pampanga",
+            "Zambales",
+            "Baguio",
+            "Tugegarao"});
             this.toInput.Location = new System.Drawing.Point(445, 21);
             this.toInput.Name = "toInput";
             this.toInput.Size = new System.Drawing.Size(236, 36);
+            this.toInput.StartIndex = 0;
             this.toInput.TabIndex = 3;
             this.toInput.SelectedIndexChanged += new System.EventHandler(this.toInput_SelectedIndexChanged);
             // 
@@ -647,9 +656,18 @@
             this.fromInput.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.fromInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.fromInput.ItemHeight = 30;
+            this.fromInput.Items.AddRange(new object[] {
+            "Select from choices",
+            "Manila",
+            "Ilocos",
+            "Pampanga",
+            "Zambales",
+            "Baguio",
+            "Tugegarao"});
             this.fromInput.Location = new System.Drawing.Point(110, 21);
             this.fromInput.Name = "fromInput";
             this.fromInput.Size = new System.Drawing.Size(236, 36);
+            this.fromInput.StartIndex = 0;
             this.fromInput.TabIndex = 1;
             this.fromInput.SelectedIndexChanged += new System.EventHandler(this.fromInput_SelectedIndexChanged);
             // 

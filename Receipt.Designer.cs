@@ -33,34 +33,30 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.doneButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.controlNumberLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.taxText = new System.Windows.Forms.Label();
+            this.discountText = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.busFeeText = new System.Windows.Forms.Label();
+            this.standardFeeText = new System.Windows.Forms.Label();
+            this.additionalFeeText = new System.Windows.Forms.Label();
+            this.totalChargeText = new System.Windows.Forms.Label();
+            this.insuranceFeeText = new System.Windows.Forms.Label();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.toText = new System.Windows.Forms.Label();
+            this.classText = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dateText = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.fromText = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -75,6 +71,8 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.insuranceText = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -121,7 +119,7 @@
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.SystemColors.GrayText;
             this.guna2CustomGradientPanel1.BorderRadius = 30;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.controlNumberLabel);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
@@ -133,73 +131,71 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(658, 546);
             this.guna2CustomGradientPanel1.TabIndex = 21;
             // 
-            // label3
+            // controlNumberLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(200, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(257, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "CONTROL NUMBER HERE";
+            this.controlNumberLabel.AutoSize = true;
+            this.controlNumberLabel.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlNumberLabel.ForeColor = System.Drawing.Color.White;
+            this.controlNumberLabel.Location = new System.Drawing.Point(200, 12);
+            this.controlNumberLabel.Name = "controlNumberLabel";
+            this.controlNumberLabel.Size = new System.Drawing.Size(257, 23);
+            this.controlNumberLabel.TabIndex = 1;
+            this.controlNumberLabel.Text = "CONTROL NUMBER HERE";
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.label29);
-            this.guna2Panel1.Controls.Add(this.label28);
+            this.guna2Panel1.Controls.Add(this.insuranceText);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.taxText);
+            this.guna2Panel1.Controls.Add(this.discountText);
             this.guna2Panel1.Controls.Add(this.label27);
             this.guna2Panel1.Controls.Add(this.label26);
-            this.guna2Panel1.Controls.Add(this.label23);
-            this.guna2Panel1.Controls.Add(this.label22);
-            this.guna2Panel1.Controls.Add(this.label17);
-            this.guna2Panel1.Controls.Add(this.label25);
-            this.guna2Panel1.Controls.Add(this.label24);
+            this.guna2Panel1.Controls.Add(this.busFeeText);
+            this.guna2Panel1.Controls.Add(this.standardFeeText);
+            this.guna2Panel1.Controls.Add(this.additionalFeeText);
+            this.guna2Panel1.Controls.Add(this.totalChargeText);
+            this.guna2Panel1.Controls.Add(this.insuranceFeeText);
             this.guna2Panel1.Controls.Add(this.guna2Shapes1);
             this.guna2Panel1.Controls.Add(this.label21);
             this.guna2Panel1.Controls.Add(this.label20);
             this.guna2Panel1.Controls.Add(this.label19);
             this.guna2Panel1.Controls.Add(this.label18);
             this.guna2Panel1.Controls.Add(this.label16);
-            this.guna2Panel1.Controls.Add(this.label14);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.label10);
+            this.guna2Panel1.Controls.Add(this.toText);
+            this.guna2Panel1.Controls.Add(this.classText);
             this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.Controls.Add(this.label15);
-            this.guna2Panel1.Controls.Add(this.label12);
-            this.guna2Panel1.Controls.Add(this.label13);
-            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.dateText);
             this.guna2Panel1.Controls.Add(this.label8);
-            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.fromText);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 43);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(658, 460);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // label29
+            // taxText
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label29.Location = new System.Drawing.Point(557, 290);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 18);
-            this.label29.TabIndex = 60;
-            this.label29.Text = "9999.00";
+            this.taxText.AutoSize = true;
+            this.taxText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.taxText.Location = new System.Drawing.Point(557, 290);
+            this.taxText.Name = "taxText";
+            this.taxText.Size = new System.Drawing.Size(78, 18);
+            this.taxText.TabIndex = 60;
+            this.taxText.Text = "9999.00";
             // 
-            // label28
+            // discountText
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label28.Location = new System.Drawing.Point(557, 260);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(78, 18);
-            this.label28.TabIndex = 59;
-            this.label28.Text = "9999.00";
+            this.discountText.AutoSize = true;
+            this.discountText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.discountText.Location = new System.Drawing.Point(557, 260);
+            this.discountText.Name = "discountText";
+            this.discountText.Size = new System.Drawing.Size(78, 18);
+            this.discountText.TabIndex = 59;
+            this.discountText.Text = "9999.00";
             // 
             // label27
             // 
@@ -223,60 +219,60 @@
             this.label26.TabIndex = 57;
             this.label26.Text = "Total Discount";
             // 
-            // label23
+            // busFeeText
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label23.Location = new System.Drawing.Point(557, 140);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(78, 18);
-            this.label23.TabIndex = 56;
-            this.label23.Text = "9999.00";
+            this.busFeeText.AutoSize = true;
+            this.busFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.busFeeText.Location = new System.Drawing.Point(557, 140);
+            this.busFeeText.Name = "busFeeText";
+            this.busFeeText.Size = new System.Drawing.Size(78, 18);
+            this.busFeeText.TabIndex = 56;
+            this.busFeeText.Text = "9999.00";
             // 
-            // label22
+            // standardFeeText
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label22.Location = new System.Drawing.Point(557, 170);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(78, 18);
-            this.label22.TabIndex = 55;
-            this.label22.Text = "9999.00";
+            this.standardFeeText.AutoSize = true;
+            this.standardFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standardFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.standardFeeText.Location = new System.Drawing.Point(557, 170);
+            this.standardFeeText.Name = "standardFeeText";
+            this.standardFeeText.Size = new System.Drawing.Size(78, 18);
+            this.standardFeeText.TabIndex = 55;
+            this.standardFeeText.Text = "9999.00";
             // 
-            // label17
+            // additionalFeeText
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label17.Location = new System.Drawing.Point(557, 200);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(78, 18);
-            this.label17.TabIndex = 54;
-            this.label17.Text = "9999.00";
+            this.additionalFeeText.AutoSize = true;
+            this.additionalFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionalFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.additionalFeeText.Location = new System.Drawing.Point(557, 200);
+            this.additionalFeeText.Name = "additionalFeeText";
+            this.additionalFeeText.Size = new System.Drawing.Size(78, 18);
+            this.additionalFeeText.TabIndex = 54;
+            this.additionalFeeText.Text = "9999.00";
             // 
-            // label25
+            // totalChargeText
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label25.Location = new System.Drawing.Point(547, 350);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(88, 18);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "59994.00";
+            this.totalChargeText.AutoSize = true;
+            this.totalChargeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalChargeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.totalChargeText.Location = new System.Drawing.Point(547, 350);
+            this.totalChargeText.Name = "totalChargeText";
+            this.totalChargeText.Size = new System.Drawing.Size(88, 18);
+            this.totalChargeText.TabIndex = 53;
+            this.totalChargeText.Text = "59994.00";
             // 
-            // label24
+            // insuranceFeeText
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label24.Location = new System.Drawing.Point(557, 230);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(78, 18);
-            this.label24.TabIndex = 52;
-            this.label24.Text = "9999.00";
+            this.insuranceFeeText.AutoSize = true;
+            this.insuranceFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.insuranceFeeText.Location = new System.Drawing.Point(557, 230);
+            this.insuranceFeeText.Name = "insuranceFeeText";
+            this.insuranceFeeText.Size = new System.Drawing.Size(78, 18);
+            this.insuranceFeeText.TabIndex = 52;
+            this.insuranceFeeText.Text = "9999.00";
             // 
             // guna2Shapes1
             // 
@@ -311,9 +307,9 @@
             this.label20.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label20.Location = new System.Drawing.Point(23, 230);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(188, 17);
+            this.label20.Size = new System.Drawing.Size(152, 17);
             this.label20.TabIndex = 47;
-            this.label20.Text = "Travel Insurance Fee";
+            this.label20.Text = "Travel Insurance";
             // 
             // label19
             // 
@@ -348,49 +344,27 @@
             this.label16.TabIndex = 43;
             this.label16.Text = "Bus Fee";
             // 
-            // label14
+            // toText
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label14.Location = new System.Drawing.Point(456, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(179, 23);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "Location here";
+            this.toText.AutoSize = true;
+            this.toText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.toText.Location = new System.Drawing.Point(432, 11);
+            this.toText.Name = "toText";
+            this.toText.Size = new System.Drawing.Size(179, 23);
+            this.toText.TabIndex = 42;
+            this.toText.Text = "Location here";
             // 
-            // label7
+            // classText
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label7.Location = new System.Drawing.Point(495, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 23);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "True/False";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label9.Location = new System.Drawing.Point(391, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 17);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Insurance:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label10.Location = new System.Drawing.Point(495, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 23);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Class Here";
+            this.classText.AutoSize = true;
+            this.classText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.classText.Location = new System.Drawing.Point(459, 46);
+            this.classText.Name = "classText";
+            this.classText.Size = new System.Drawing.Size(140, 23);
+            this.classText.TabIndex = 39;
+            this.classText.Text = "Class Here";
             // 
             // label11
             // 
@@ -414,38 +388,16 @@
             this.label15.TabIndex = 36;
             this.label15.Text = "To:";
             // 
-            // label12
+            // dateText
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label12.Location = new System.Drawing.Point(172, 82);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 23);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Count here";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label13.Location = new System.Drawing.Point(23, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 17);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Passenger Count:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label4.Location = new System.Drawing.Point(185, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 23);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Date here";
+            this.dateText.AutoSize = true;
+            this.dateText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.dateText.Location = new System.Drawing.Point(84, 46);
+            this.dateText.Name = "dateText";
+            this.dateText.Size = new System.Drawing.Size(127, 23);
+            this.dateText.TabIndex = 29;
+            this.dateText.Text = "Date here";
             // 
             // label8
             // 
@@ -458,16 +410,16 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "Date:";
             // 
-            // label6
+            // fromText
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label6.Location = new System.Drawing.Point(133, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 23);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Location here";
+            this.fromText.AutoSize = true;
+            this.fromText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.fromText.Location = new System.Drawing.Point(82, 11);
+            this.fromText.Name = "fromText";
+            this.fromText.Size = new System.Drawing.Size(179, 23);
+            this.fromText.TabIndex = 25;
+            this.fromText.Text = "Location here";
             // 
             // label5
             // 
@@ -672,6 +624,28 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label2.Location = new System.Drawing.Point(23, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Insurance:";
+            // 
+            // insuranceText
+            // 
+            this.insuranceText.AutoSize = true;
+            this.insuranceText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.insuranceText.Location = new System.Drawing.Point(127, 82);
+            this.insuranceText.Name = "insuranceText";
+            this.insuranceText.Size = new System.Drawing.Size(140, 23);
+            this.insuranceText.TabIndex = 62;
+            this.insuranceText.Text = "True/False";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -715,35 +689,33 @@
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label controlNumberLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label taxText;
+        private System.Windows.Forms.Label discountText;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label busFeeText;
+        private System.Windows.Forms.Label standardFeeText;
+        private System.Windows.Forms.Label additionalFeeText;
+        private System.Windows.Forms.Label totalChargeText;
+        private System.Windows.Forms.Label insuranceFeeText;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label toText;
+        private System.Windows.Forms.Label classText;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label dateText;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label fromText;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button doneButton;
+        private System.Windows.Forms.Label insuranceText;
+        private System.Windows.Forms.Label label2;
     }
 }

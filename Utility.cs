@@ -11,7 +11,6 @@ namespace Bus_Ticketing
         public static string fullname { get; set; }
         public static int id { get; set; }
     }
-
     public class Passenger
     {
         public static string controlNumber { get; set; }
@@ -109,7 +108,6 @@ namespace Bus_Ticketing
                    $"Age: {Age}";
         }
     }
-
     public class ControlNumber
     {
         public static string generate()
@@ -125,6 +123,54 @@ namespace Bus_Ticketing
             }
 
             return stringBuilder.ToString();
+        }
+    }
+
+    //DO COMPUTATION HERE
+    public class Charge
+    {
+        //GET THE PASSENGER DETAILS FROM THE SQL USING THE USERID AND CONTROL NUMBER AS A FILTER FOR SQL LOOKUP
+        //NOTE: IT SHOULD BE PER PASSENGER
+        public static double computeBusFee(string From, string To)
+        {
+            double busFee = 0;
+            return busFee;
+        }
+
+        public static double computeStandardProcessingFee()
+        {
+            double standardProcessingFee = 0;
+            return standardProcessingFee;
+        }
+
+        public static double computeAdditionalProcessingFee()
+        {
+            double additionalProcessingFee = 0;
+            return additionalProcessingFee;
+        }
+
+        public static double computeInsuranceFee()
+        {
+            double insuranceFee = 0;
+            return insuranceFee;
+        }
+
+        public static double computeTotalDiscount()
+        {
+            double totalDiscount = 0;
+            return totalDiscount;
+        }
+
+        public static double computeTotalTax()
+        {
+            double totalTax = 0;
+            return totalTax;
+        }
+
+        public static double computeTotalCharge()
+        {
+            double totalCharge = 0;
+            return totalCharge;
         }
     }
 }

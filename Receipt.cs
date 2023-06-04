@@ -12,6 +12,7 @@ namespace Bus_Ticketing
 {
     public partial class Receipt : Form
     {
+        string controlNumber = Passenger.controlNumber;
         public Receipt()
         {
             InitializeComponent();
@@ -66,6 +67,7 @@ namespace Bus_Ticketing
         private void Receipt_Load(object sender, EventArgs e)
         {
             fullnameText.Text = User.fullname;
+            controlNumberLabel.Text = controlNumber;
         }
 
         private void bookButton_Click(object sender, EventArgs e)
