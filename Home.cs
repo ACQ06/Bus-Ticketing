@@ -78,12 +78,12 @@ namespace Bus_Ticketing
 
         private void Home_Load(object sender, EventArgs e)
         {
-            fullnameText.Text = utility.fullname;
+            fullnameText.Text = User.fullname;
         }
         private void signOutButton_Click(object sender, EventArgs e)
         {
-            utility.fullname = "";
-            utility.id = 0;
+            User.fullname = "";
+            User.id = 0;
             FormManager.ShowForm(FormManager.login);
             FormManager.HideForm(FormManager.home);
         }

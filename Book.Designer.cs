@@ -39,7 +39,7 @@
             this.miInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.firstnameInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.lastnameInput = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateInput = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.addButton = new Guna.UI2.WinForms.Guna2Button();
             this.payButton = new Guna.UI2.WinForms.Guna2Button();
@@ -50,19 +50,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.insuranceInput = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.roundtripInput = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.classA = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton4 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.classC = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.classD = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.classB = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.toInput = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.fromInput = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -131,7 +131,7 @@
             this.panel2.Controls.Add(this.miInput);
             this.panel2.Controls.Add(this.firstnameInput);
             this.panel2.Controls.Add(this.lastnameInput);
-            this.panel2.Controls.Add(this.guna2DateTimePicker1);
+            this.panel2.Controls.Add(this.dateInput);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.addButton);
             this.panel2.Controls.Add(this.payButton);
@@ -258,21 +258,21 @@
             this.lastnameInput.Size = new System.Drawing.Size(290, 34);
             this.lastnameInput.TabIndex = 40;
             // 
-            // guna2DateTimePicker1
+            // dateInput
             // 
-            this.guna2DateTimePicker1.BorderRadius = 25;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Courier New", 11.25F);
-            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(473, 213);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(289, 57);
-            this.guna2DateTimePicker1.TabIndex = 39;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 6, 3, 22, 36, 44, 687);
+            this.dateInput.BorderRadius = 25;
+            this.dateInput.Checked = true;
+            this.dateInput.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
+            this.dateInput.Font = new System.Drawing.Font("Courier New", 11.25F);
+            this.dateInput.ForeColor = System.Drawing.Color.White;
+            this.dateInput.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateInput.Location = new System.Drawing.Point(473, 213);
+            this.dateInput.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateInput.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateInput.Name = "dateInput";
+            this.dateInput.Size = new System.Drawing.Size(289, 57);
+            this.dateInput.TabIndex = 39;
+            this.dateInput.Value = new System.DateTime(2023, 6, 3, 22, 36, 44, 687);
             // 
             // label12
             // 
@@ -305,6 +305,7 @@
             this.addButton.Size = new System.Drawing.Size(147, 37);
             this.addButton.TabIndex = 37;
             this.addButton.Text = "Add";
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // payButton
             // 
@@ -402,7 +403,7 @@
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 20;
-            this.guna2CustomGradientPanel4.Controls.Add(this.guna2CheckBox2);
+            this.guna2CustomGradientPanel4.Controls.Add(this.insuranceInput);
             this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
@@ -412,31 +413,32 @@
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(356, 57);
             this.guna2CustomGradientPanel4.TabIndex = 20;
             // 
-            // guna2CheckBox2
+            // insuranceInput
             // 
-            this.guna2CheckBox2.AutoSize = true;
-            this.guna2CheckBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
-            this.guna2CheckBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox2.Location = new System.Drawing.Point(81, 11);
-            this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(193, 35);
-            this.guna2CheckBox2.TabIndex = 19;
-            this.guna2CheckBox2.Text = " Insurance";
-            this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox2.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox2.UseVisualStyleBackColor = false;
+            this.insuranceInput.AutoSize = true;
+            this.insuranceInput.BackColor = System.Drawing.Color.Transparent;
+            this.insuranceInput.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.insuranceInput.CheckedState.BorderRadius = 0;
+            this.insuranceInput.CheckedState.BorderThickness = 0;
+            this.insuranceInput.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.insuranceInput.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
+            this.insuranceInput.ForeColor = System.Drawing.Color.White;
+            this.insuranceInput.Location = new System.Drawing.Point(81, 11);
+            this.insuranceInput.Name = "insuranceInput";
+            this.insuranceInput.Size = new System.Drawing.Size(193, 35);
+            this.insuranceInput.TabIndex = 19;
+            this.insuranceInput.Text = " Insurance";
+            this.insuranceInput.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.insuranceInput.UncheckedState.BorderRadius = 0;
+            this.insuranceInput.UncheckedState.BorderThickness = 0;
+            this.insuranceInput.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.insuranceInput.UseVisualStyleBackColor = false;
+            this.insuranceInput.CheckedChanged += new System.EventHandler(this.insuranceInput_CheckedChanged);
             // 
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 20;
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2CheckBox1);
+            this.guna2CustomGradientPanel3.Controls.Add(this.roundtripInput);
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
@@ -446,35 +448,36 @@
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(356, 57);
             this.guna2CustomGradientPanel3.TabIndex = 18;
             // 
-            // guna2CheckBox1
+            // roundtripInput
             // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
-            this.guna2CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.Location = new System.Drawing.Point(81, 11);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(193, 35);
-            this.guna2CheckBox1.TabIndex = 19;
-            this.guna2CheckBox1.Text = " Roundtrip";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.UseVisualStyleBackColor = false;
+            this.roundtripInput.AutoSize = true;
+            this.roundtripInput.BackColor = System.Drawing.Color.Transparent;
+            this.roundtripInput.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roundtripInput.CheckedState.BorderRadius = 0;
+            this.roundtripInput.CheckedState.BorderThickness = 0;
+            this.roundtripInput.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roundtripInput.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
+            this.roundtripInput.ForeColor = System.Drawing.Color.White;
+            this.roundtripInput.Location = new System.Drawing.Point(81, 11);
+            this.roundtripInput.Name = "roundtripInput";
+            this.roundtripInput.Size = new System.Drawing.Size(193, 35);
+            this.roundtripInput.TabIndex = 19;
+            this.roundtripInput.Text = " Roundtrip";
+            this.roundtripInput.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundtripInput.UncheckedState.BorderRadius = 0;
+            this.roundtripInput.UncheckedState.BorderThickness = 0;
+            this.roundtripInput.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.roundtripInput.UseVisualStyleBackColor = false;
+            this.roundtripInput.CheckedChanged += new System.EventHandler(this.roundtripInput_CheckedChanged);
             // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton1);
+            this.guna2CustomGradientPanel2.Controls.Add(this.classA);
             this.guna2CustomGradientPanel2.Controls.Add(this.label5);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton4);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton2);
+            this.guna2CustomGradientPanel2.Controls.Add(this.classC);
+            this.guna2CustomGradientPanel2.Controls.Add(this.classD);
+            this.guna2CustomGradientPanel2.Controls.Add(this.classB);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(153)))), ((int)(((byte)(207)))));
@@ -484,27 +487,28 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(421, 57);
             this.guna2CustomGradientPanel2.TabIndex = 17;
             // 
-            // guna2RadioButton1
+            // classA
             // 
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
-            this.guna2RadioButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(134, 11);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(48, 35);
-            this.guna2RadioButton1.TabIndex = 13;
-            this.guna2RadioButton1.Text = "A";
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UseVisualStyleBackColor = false;
+            this.classA.AutoSize = true;
+            this.classA.BackColor = System.Drawing.Color.Transparent;
+            this.classA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classA.CheckedState.BorderThickness = 0;
+            this.classA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classA.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.classA.CheckedState.InnerOffset = -4;
+            this.classA.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
+            this.classA.ForeColor = System.Drawing.Color.White;
+            this.classA.Location = new System.Drawing.Point(134, 11);
+            this.classA.Name = "classA";
+            this.classA.Size = new System.Drawing.Size(48, 35);
+            this.classA.TabIndex = 13;
+            this.classA.Text = "A";
+            this.classA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.classA.UncheckedState.BorderThickness = 2;
+            this.classA.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.classA.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.classA.UseVisualStyleBackColor = false;
+            this.classA.CheckedChanged += new System.EventHandler(this.classA_CheckedChanged);
             // 
             // label5
             // 
@@ -518,78 +522,81 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Class";
             // 
-            // guna2RadioButton3
+            // classC
             // 
-            this.guna2RadioButton3.AutoSize = true;
-            this.guna2RadioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(274, 11);
-            this.guna2RadioButton3.Name = "guna2RadioButton3";
-            this.guna2RadioButton3.Size = new System.Drawing.Size(48, 35);
-            this.guna2RadioButton3.TabIndex = 15;
-            this.guna2RadioButton3.Text = "C";
-            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UseVisualStyleBackColor = false;
+            this.classC.AutoSize = true;
+            this.classC.BackColor = System.Drawing.Color.Transparent;
+            this.classC.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classC.CheckedState.BorderThickness = 0;
+            this.classC.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classC.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.classC.CheckedState.InnerOffset = -4;
+            this.classC.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
+            this.classC.ForeColor = System.Drawing.Color.White;
+            this.classC.Location = new System.Drawing.Point(274, 11);
+            this.classC.Name = "classC";
+            this.classC.Size = new System.Drawing.Size(48, 35);
+            this.classC.TabIndex = 15;
+            this.classC.Text = "C";
+            this.classC.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.classC.UncheckedState.BorderThickness = 2;
+            this.classC.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.classC.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.classC.UseVisualStyleBackColor = false;
+            this.classC.CheckedChanged += new System.EventHandler(this.classC_CheckedChanged);
             // 
-            // guna2RadioButton4
+            // classD
             // 
-            this.guna2RadioButton4.AutoSize = true;
-            this.guna2RadioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton4.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton4.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton4.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton4.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton4.Location = new System.Drawing.Point(344, 11);
-            this.guna2RadioButton4.Name = "guna2RadioButton4";
-            this.guna2RadioButton4.Size = new System.Drawing.Size(48, 35);
-            this.guna2RadioButton4.TabIndex = 16;
-            this.guna2RadioButton4.Text = "D";
-            this.guna2RadioButton4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton4.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton4.UseVisualStyleBackColor = false;
+            this.classD.AutoSize = true;
+            this.classD.BackColor = System.Drawing.Color.Transparent;
+            this.classD.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classD.CheckedState.BorderThickness = 0;
+            this.classD.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classD.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.classD.CheckedState.InnerOffset = -4;
+            this.classD.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold);
+            this.classD.ForeColor = System.Drawing.Color.White;
+            this.classD.Location = new System.Drawing.Point(344, 11);
+            this.classD.Name = "classD";
+            this.classD.Size = new System.Drawing.Size(48, 35);
+            this.classD.TabIndex = 16;
+            this.classD.Text = "D";
+            this.classD.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.classD.UncheckedState.BorderThickness = 2;
+            this.classD.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.classD.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.classD.UseVisualStyleBackColor = false;
+            this.classD.CheckedChanged += new System.EventHandler(this.classD_CheckedChanged);
             // 
-            // guna2RadioButton2
+            // classB
             // 
-            this.guna2RadioButton2.AutoSize = true;
-            this.guna2RadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(204, 11);
-            this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(48, 35);
-            this.guna2RadioButton2.TabIndex = 14;
-            this.guna2RadioButton2.Text = "B";
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UseVisualStyleBackColor = false;
+            this.classB.AutoSize = true;
+            this.classB.BackColor = System.Drawing.Color.Transparent;
+            this.classB.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classB.CheckedState.BorderThickness = 0;
+            this.classB.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.classB.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.classB.CheckedState.InnerOffset = -4;
+            this.classB.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classB.ForeColor = System.Drawing.Color.White;
+            this.classB.Location = new System.Drawing.Point(204, 11);
+            this.classB.Name = "classB";
+            this.classB.Size = new System.Drawing.Size(48, 35);
+            this.classB.TabIndex = 14;
+            this.classB.Text = "B";
+            this.classB.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.classB.UncheckedState.BorderThickness = 2;
+            this.classB.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.classB.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.classB.UseVisualStyleBackColor = false;
+            this.classB.CheckedChanged += new System.EventHandler(this.classB_CheckedChanged);
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ComboBox2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.toInput);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ComboBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.fromInput);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
@@ -600,21 +607,22 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(734, 85);
             this.guna2CustomGradientPanel1.TabIndex = 12;
             // 
-            // guna2ComboBox2
+            // toInput
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 10;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(445, 21);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(236, 36);
-            this.guna2ComboBox2.TabIndex = 3;
+            this.toInput.BackColor = System.Drawing.Color.Transparent;
+            this.toInput.BorderRadius = 10;
+            this.toInput.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.toInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toInput.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.toInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.toInput.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.toInput.ItemHeight = 30;
+            this.toInput.Location = new System.Drawing.Point(445, 21);
+            this.toInput.Name = "toInput";
+            this.toInput.Size = new System.Drawing.Size(236, 36);
+            this.toInput.TabIndex = 3;
+            this.toInput.SelectedIndexChanged += new System.EventHandler(this.toInput_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -628,21 +636,22 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "To";
             // 
-            // guna2ComboBox1
+            // fromInput
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(110, 21);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(236, 36);
-            this.guna2ComboBox1.TabIndex = 1;
+            this.fromInput.BackColor = System.Drawing.Color.Transparent;
+            this.fromInput.BorderRadius = 10;
+            this.fromInput.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.fromInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fromInput.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.fromInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.fromInput.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.fromInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.fromInput.ItemHeight = 30;
+            this.fromInput.Location = new System.Drawing.Point(110, 21);
+            this.fromInput.Name = "fromInput";
+            this.fromInput.Size = new System.Drawing.Size(236, 36);
+            this.fromInput.TabIndex = 1;
+            this.fromInput.SelectedIndexChanged += new System.EventHandler(this.fromInput_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -857,18 +866,18 @@
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox toInput;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox fromInput;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2RadioButton classA;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton4;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
+        private Guna.UI2.WinForms.Guna2RadioButton classD;
+        private Guna.UI2.WinForms.Guna2RadioButton classB;
+        private Guna.UI2.WinForms.Guna2RadioButton classC;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2CheckBox roundtripInput;
         private Guna.UI2.WinForms.Guna2Button addButton;
         private Guna.UI2.WinForms.Guna2Button payButton;
         private System.Windows.Forms.Label label11;
@@ -878,9 +887,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
+        private Guna.UI2.WinForms.Guna2CheckBox insuranceInput;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateInput;
         private Guna.UI2.WinForms.Guna2TextBox miInput;
         private Guna.UI2.WinForms.Guna2TextBox firstnameInput;
         private Guna.UI2.WinForms.Guna2TextBox lastnameInput;

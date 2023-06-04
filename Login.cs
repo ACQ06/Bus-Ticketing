@@ -88,8 +88,8 @@ namespace Bus_Ticketing
                     emailInput.Clear();
                     passwordInput.Clear();
 
-                    utility.id = int.Parse(myReader.GetValue(0).ToString());
-                    utility.fullname = myReader.GetValue(1).ToString();
+                    User.id = int.Parse(myReader.GetValue(0).ToString());
+                    User.fullname = myReader.GetValue(1).ToString();
 
                     FormManager.ShowForm(FormManager.home);
                     FormManager.HideForm(FormManager.login);
