@@ -4,6 +4,7 @@ using System.Linq;
 using System.Management;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bus_Ticketing
 {
@@ -311,21 +312,32 @@ namespace Bus_Ticketing
             return insuranceFee;
         }
 
-        public static double computeTotalDiscount()
+        public static double computeTotalDiscount(int age)
         {
             double totalDiscount = 0;
+
+            if (age > 59)
+            {
+                totalDiscount = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) * .12;
+)           }
+
             return totalDiscount;
         }
 
+        /* NOT NEEDED ANYMORE
         public static double computeTotalTax()
         {
             double totalTax = 0;
             return totalTax;
         }
+        */
 
         public static double computeTotalCharge()
         {
             double totalCharge = 0;
+
+            totalCharge = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) - computeTotalDiscount(/*insert SQL statement*/);
+
             return totalCharge;
         }
     }
