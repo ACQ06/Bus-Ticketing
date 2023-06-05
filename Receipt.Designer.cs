@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receipt));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.doneButton = new Guna.UI2.WinForms.Guna2Button();
+            this.nextButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.controlNumberLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -73,6 +73,7 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.prevButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -83,7 +84,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.doneButton);
+            this.panel2.Controls.Add(this.prevButton);
+            this.panel2.Controls.Add(this.nextButton);
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -93,25 +95,24 @@
             this.panel2.Size = new System.Drawing.Size(785, 768);
             this.panel2.TabIndex = 20;
             // 
-            // doneButton
+            // nextButton
             // 
-            this.doneButton.Animated = true;
-            this.doneButton.BorderRadius = 15;
-            this.doneButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.doneButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.doneButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.doneButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.doneButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.doneButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doneButton.ForeColor = System.Drawing.Color.White;
-            this.doneButton.Image = ((System.Drawing.Image)(resources.GetObject("doneButton.Image")));
-            this.doneButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.doneButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.doneButton.Location = new System.Drawing.Point(324, 657);
-            this.doneButton.Name = "doneButton";
-            this.doneButton.Size = new System.Drawing.Size(147, 37);
-            this.doneButton.TabIndex = 22;
-            this.doneButton.Text = "Done";
+            this.nextButton.Animated = true;
+            this.nextButton.BorderRadius = 15;
+            this.nextButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.nextButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.nextButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.nextButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.nextButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.nextButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.ForeColor = System.Drawing.Color.White;
+            this.nextButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.nextButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.nextButton.Location = new System.Drawing.Point(433, 654);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(147, 37);
+            this.nextButton.TabIndex = 22;
+            this.nextButton.Text = "Next";
             // 
             // guna2CustomGradientPanel1
             // 
@@ -646,6 +647,25 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // prevButton
+            // 
+            this.prevButton.Animated = true;
+            this.prevButton.BorderRadius = 15;
+            this.prevButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.prevButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.prevButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.prevButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.prevButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.prevButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevButton.ForeColor = System.Drawing.Color.White;
+            this.prevButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.prevButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.prevButton.Location = new System.Drawing.Point(211, 654);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(147, 37);
+            this.prevButton.TabIndex = 23;
+            this.prevButton.Text = "Previous";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,8 +734,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label fromText;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button doneButton;
+        private Guna.UI2.WinForms.Guna2Button nextButton;
         private System.Windows.Forms.Label insuranceText;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button prevButton;
     }
 }
