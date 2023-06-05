@@ -343,5 +343,15 @@ namespace Bus_Ticketing
 
             return totalCharge;
         }
+
+        //add SQL
+        public static double computeFinalCharges()
+        {
+            double finalCharges = 0;
+
+            finalCharges = (computeBusFee() + computeInsuranceFee() + computeTotalCharge());
+
+            return finalCharges;
+        }
     }
 }
