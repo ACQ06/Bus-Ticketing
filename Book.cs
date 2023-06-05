@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -313,7 +314,10 @@ namespace Bus_Ticketing
                 return;
             };
 
-            passenger.Date = dateInput.Text;
+            DateTime date = DateTime.ParseExact(dateInput.Text, "dddd, MMMM d, yyyy", null);
+            string outputDate = date.ToString("yyyy-MM-dd");
+
+            passenger.Date = outputDate;
             passenger.Lastname = lastnameInput.Text;
             passenger.Firstname = firstnameInput.Text;
             passenger.MiddleInitial = miInput.Text[0];

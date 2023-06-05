@@ -40,7 +40,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nameText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.totalProcessingFeeText = new System.Windows.Forms.Label();
             this.discountText = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.busFeeText = new System.Windows.Forms.Label();
             this.standardFeeText = new System.Windows.Forms.Label();
@@ -74,8 +76,6 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.totalProcessingFeeText = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -245,6 +245,17 @@
             this.label2.TabIndex = 61;
             this.label2.Text = "Name:";
             // 
+            // totalProcessingFeeText
+            // 
+            this.totalProcessingFeeText.AutoSize = true;
+            this.totalProcessingFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalProcessingFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.totalProcessingFeeText.Location = new System.Drawing.Point(557, 226);
+            this.totalProcessingFeeText.Name = "totalProcessingFeeText";
+            this.totalProcessingFeeText.Size = new System.Drawing.Size(78, 18);
+            this.totalProcessingFeeText.TabIndex = 60;
+            this.totalProcessingFeeText.Text = "9999.00";
+            // 
             // discountText
             // 
             this.discountText.AutoSize = true;
@@ -255,6 +266,17 @@
             this.discountText.Size = new System.Drawing.Size(78, 18);
             this.discountText.TabIndex = 59;
             this.discountText.Text = "9999.00";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label27.Location = new System.Drawing.Point(23, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(188, 17);
+            this.label27.TabIndex = 58;
+            this.label27.Text = "Total Processing Fee";
             // 
             // label26
             // 
@@ -672,28 +694,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // totalProcessingFeeText
-            // 
-            this.totalProcessingFeeText.AutoSize = true;
-            this.totalProcessingFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalProcessingFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.totalProcessingFeeText.Location = new System.Drawing.Point(557, 226);
-            this.totalProcessingFeeText.Name = "totalProcessingFeeText";
-            this.totalProcessingFeeText.Size = new System.Drawing.Size(78, 18);
-            this.totalProcessingFeeText.TabIndex = 60;
-            this.totalProcessingFeeText.Text = "9999.00";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label27.Location = new System.Drawing.Point(23, 226);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(188, 17);
-            this.label27.TabIndex = 58;
-            this.label27.Text = "Total Processing Fee";
             // 
             // Receipt
             // 

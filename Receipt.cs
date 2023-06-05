@@ -129,7 +129,7 @@ namespace Bus_Ticketing
                     passengerDetail.MiddleInitial = myReader.GetChar("mi");
                     passengerDetail.Alias = myReader.GetString("alias");
                     passengerDetail.Age = myReader.GetInt32("age");
-                    passengerDetail.Date = myReader.GetString("date");
+                    passengerDetail.Date = myReader.GetMySqlDateTime("date").ToString();
                     passengerDetail.From = myReader.GetString("from");
                     passengerDetail.To = myReader.GetString("to");
                     passengerDetail.Class_ = myReader.GetChar("class");
@@ -142,6 +142,7 @@ namespace Bus_Ticketing
                 myConn.Close();
 
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -182,7 +183,6 @@ namespace Bus_Ticketing
                 MessageBox.Show("Error loading passenger details");
             }
         }
-
         private void prevButton_Click(object sender, EventArgs e)
         {
             if (counter <= 0)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +55,42 @@ namespace Bus_Ticketing
             }
         }
 
+        public void displayUpcomingTrip()
+        {
+            string dateToday = DateTime.Now.ToString("yyyy-MM-dd");
+            try
+            {
+                string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlCommand SelectCommand = new MySqlCommand($"select * from `bus_data`.`transaction_info` WHERE userid={User.id} order by 6 desc limit 1;", myConn);
+                MySqlDataReader myReader;
+                myConn.Open();
+                myReader = SelectCommand.ExecuteReader();
+
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        upcomingControlNumber.Text = myReader.GetString("ctrlNumber");
+                        upcomingDate.Text = myReader.GetMySqlDateTime("date").ToString();
+                    }
+                }
+
+                else
+                {
+                    UpcomingTitle.Text = "No upcoming trips";
+                    upcomingControlNumber.Hide();
+                    upcomingDate.Hide();
+                }
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void handCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
@@ -80,10 +117,10 @@ namespace Bus_Ticketing
             FormManager.ShowForm(FormManager.book);
             FormManager.HideForm(FormManager.home);
         }
-
         private void Home_Load(object sender, EventArgs e)
         {
             fullnameText.Text = User.fullname;
+            displayUpcomingTrip();
         }
         private void signOutButton_Click(object sender, EventArgs e)
         {

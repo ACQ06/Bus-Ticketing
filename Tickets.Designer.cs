@@ -358,9 +358,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.label7.Location = new System.Drawing.Point(3, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 23);
+            this.label7.Size = new System.Drawing.Size(178, 23);
             this.label7.TabIndex = 15;
-            this.label7.Text = "From - To";
+            this.label7.Text = "Control Number";
             // 
             // panel8
             // 
@@ -390,9 +390,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.label10.Location = new System.Drawing.Point(3, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 23);
+            this.label10.Size = new System.Drawing.Size(178, 23);
             this.label10.TabIndex = 15;
-            this.label10.Text = "From - To";
+            this.label10.Text = "Control Number";
             // 
             // panel9
             // 
@@ -422,9 +422,9 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.label13.Location = new System.Drawing.Point(3, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 23);
+            this.label13.Size = new System.Drawing.Size(178, 23);
             this.label13.TabIndex = 15;
-            this.label13.Text = "From - To";
+            this.label13.Text = "Control Number";
             // 
             // panel2
             // 

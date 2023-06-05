@@ -16,6 +16,8 @@ namespace Bus_Ticketing
     public class Passenger
     {
         public static string controlNumber { get; set; }
+
+        private string ctrlNumber;
         private char class_;
         private string to;
         private string from;
@@ -27,6 +29,12 @@ namespace Bus_Ticketing
         private char middleInitial;
         private string alias;
         private int age;
+
+        public string CtrlNumber
+        {
+            get { return ctrlNumber; }
+            set { ctrlNumber = value; }
+        }
 
         public char Class_
         {

@@ -52,9 +52,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.UpcomingDate = new System.Windows.Forms.Label();
-            this.UpcomingDestination = new System.Windows.Forms.Label();
+            this.UpcomingTitle = new System.Windows.Forms.Label();
+            this.upcomingDate = new System.Windows.Forms.Label();
+            this.upcomingControlNumber = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -349,9 +349,9 @@
             // guna2CustomGradientPanel5
             // 
             this.guna2CustomGradientPanel5.BorderRadius = 10;
-            this.guna2CustomGradientPanel5.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDate);
-            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDestination);
+            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingTitle);
+            this.guna2CustomGradientPanel5.Controls.Add(this.upcomingDate);
+            this.guna2CustomGradientPanel5.Controls.Add(this.upcomingControlNumber);
             this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.Transparent;
@@ -360,38 +360,38 @@
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(728, 89);
             this.guna2CustomGradientPanel5.TabIndex = 18;
             // 
-            // label4
+            // UpcomingTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 37);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Upcoming Trip";
+            this.UpcomingTitle.AutoSize = true;
+            this.UpcomingTitle.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpcomingTitle.ForeColor = System.Drawing.Color.White;
+            this.UpcomingTitle.Location = new System.Drawing.Point(15, 12);
+            this.UpcomingTitle.Name = "UpcomingTitle";
+            this.UpcomingTitle.Size = new System.Drawing.Size(277, 37);
+            this.UpcomingTitle.TabIndex = 15;
+            this.UpcomingTitle.Text = "Upcoming Trip";
             // 
-            // UpcomingDate
+            // upcomingDate
             // 
-            this.UpcomingDate.AutoSize = true;
-            this.UpcomingDate.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpcomingDate.ForeColor = System.Drawing.Color.White;
-            this.UpcomingDate.Location = new System.Drawing.Point(19, 66);
-            this.UpcomingDate.Name = "UpcomingDate";
-            this.UpcomingDate.Size = new System.Drawing.Size(44, 17);
-            this.UpcomingDate.TabIndex = 17;
-            this.UpcomingDate.Text = "Date";
+            this.upcomingDate.AutoSize = true;
+            this.upcomingDate.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upcomingDate.ForeColor = System.Drawing.Color.White;
+            this.upcomingDate.Location = new System.Drawing.Point(19, 66);
+            this.upcomingDate.Name = "upcomingDate";
+            this.upcomingDate.Size = new System.Drawing.Size(44, 17);
+            this.upcomingDate.TabIndex = 17;
+            this.upcomingDate.Text = "Date";
             // 
-            // UpcomingDestination
+            // upcomingControlNumber
             // 
-            this.UpcomingDestination.AutoSize = true;
-            this.UpcomingDestination.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpcomingDestination.ForeColor = System.Drawing.Color.White;
-            this.UpcomingDestination.Location = new System.Drawing.Point(19, 49);
-            this.UpcomingDestination.Name = "UpcomingDestination";
-            this.UpcomingDestination.Size = new System.Drawing.Size(89, 17);
-            this.UpcomingDestination.TabIndex = 16;
-            this.UpcomingDestination.Text = "From - To";
+            this.upcomingControlNumber.AutoSize = true;
+            this.upcomingControlNumber.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upcomingControlNumber.ForeColor = System.Drawing.Color.White;
+            this.upcomingControlNumber.Location = new System.Drawing.Point(19, 49);
+            this.upcomingControlNumber.Name = "upcomingControlNumber";
+            this.upcomingControlNumber.Size = new System.Drawing.Size(134, 17);
+            this.upcomingControlNumber.TabIndex = 16;
+            this.upcomingControlNumber.Text = "Control Number";
             // 
             // panel3
             // 
@@ -634,9 +634,9 @@
         private Guna.UI2.WinForms.Guna2Button signOutButton;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button bookButton;
-        private System.Windows.Forms.Label UpcomingDate;
-        private System.Windows.Forms.Label UpcomingDestination;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label upcomingDate;
+        private System.Windows.Forms.Label upcomingControlNumber;
+        private System.Windows.Forms.Label UpcomingTitle;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
