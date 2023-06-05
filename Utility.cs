@@ -260,27 +260,30 @@ namespace Bus_Ticketing
             return standardProcessingFee;
         }
 
-        public static double computeAdditionalProcessingFee(char busType)
+        public static double computeAdditionalProcessingFee(string From, bool IsRoundtrip, char busType)
         {
             double additionalProcessingFee = 0;
 
-            switch (busType)
+            if (!(From.Equals("Manila") && !IsRoundtrip))
             {
-                case 'A':
-                    additionalProcessingFee = 30;
-                    break;
+                switch (busType)
+                {
+                    case 'A':
+                        additionalProcessingFee = 30;
+                        break;
 
-                case 'B':
-                    additionalProcessingFee = 20;
-                    break;
+                    case 'B':
+                        additionalProcessingFee = 20;
+                        break;
 
-                case 'C':
-                    additionalProcessingFee = 15;
-                    break;
+                    case 'C':
+                        additionalProcessingFee = 15;
+                        break;
 
-                case 'D':
-                    additionalProcessingFee = 10;
-                    break;
+                    case 'D':
+                        additionalProcessingFee = 10;
+                        break;
+                }
             }
             return additionalProcessingFee;
         }
@@ -339,6 +342,16 @@ namespace Bus_Ticketing
             //totalCharge = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) - computeTotalDiscount(/*insert SQL statement*/);
 
             return totalCharge;
+        }
+
+        //add SQL
+        public static double computeFinalCharges()
+        {
+            double finalCharges = 0;
+
+            finalCharges = (computeBusFee() + computeInsuranceFee() + computeTotalCharge());
+
+            return finalCharges;
         }
     }
 }
