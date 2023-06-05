@@ -75,9 +75,15 @@ namespace Bus_Ticketing
 
         private void payButton_Click(object sender, EventArgs e)
         {
+            if (!isAccompanied())
+            {
+                MessageBox.Show("Child cannot travel alone must be accompanied by at least one (1) Adult and or Senior Citizen");
+                return;
+            }
+
             Dictionary<string, List<Passenger>> transaction = new Dictionary<string, List<Passenger>>()
             {
-                { Passenger.controlNumber, allPassenger }
+                { Passenger.controlNumber, allPassenger}
             };
 
             foreach (KeyValuePair<string, List<Passenger>> kvp in transaction)
@@ -111,6 +117,27 @@ namespace Bus_Ticketing
             FormManager.HideForm(FormManager.book);
 
         }
+        private bool isAccompanied()
+        {
+            int childCount = 0;
+            int adultCount = 0;
+
+            foreach(Passenger passenger in allPassenger)
+            {
+                if (passenger.Age < 18) {
+                    childCount++;
+                    continue;
+                }
+                adultCount++;
+            }
+
+            if(childCount == 0) return true;
+
+            if (adultCount > 0) return true;
+
+            return false;
+        }
+
         private void homeButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.home);
