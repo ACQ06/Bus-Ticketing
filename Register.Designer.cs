@@ -81,6 +81,7 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.exitProgram);
             this.guna2ControlBox2.MouseEnter += new System.EventHandler(this.handCursor);
             this.guna2ControlBox2.MouseLeave += new System.EventHandler(this.defaultCursor);
             // 

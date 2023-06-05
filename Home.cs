@@ -64,6 +64,11 @@ namespace Bus_Ticketing
             Cursor = Cursors.Default;
         }
 
+        private void exitProgram(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ticketsButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.tickets);

@@ -66,6 +66,11 @@ namespace Bus_Ticketing
             Cursor = Cursors.Default;
         }
 
+        private void exitProgram(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
             try

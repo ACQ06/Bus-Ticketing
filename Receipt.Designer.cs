@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receipt));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.prevButton = new Guna.UI2.WinForms.Guna2Button();
             this.nextButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.controlNumberLabel = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.insuranceText = new System.Windows.Forms.Label();
+            this.roundtripText = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nameText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.taxText = new System.Windows.Forms.Label();
             this.discountText = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.busFeeText = new System.Windows.Forms.Label();
             this.standardFeeText = new System.Windows.Forms.Label();
@@ -73,7 +74,8 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.prevButton = new Guna.UI2.WinForms.Guna2Button();
+            this.totalProcessingFeeText = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -95,6 +97,26 @@
             this.panel2.Size = new System.Drawing.Size(785, 768);
             this.panel2.TabIndex = 20;
             // 
+            // prevButton
+            // 
+            this.prevButton.Animated = true;
+            this.prevButton.BorderRadius = 15;
+            this.prevButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.prevButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.prevButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.prevButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.prevButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.prevButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prevButton.ForeColor = System.Drawing.Color.White;
+            this.prevButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.prevButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.prevButton.Location = new System.Drawing.Point(211, 654);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(147, 37);
+            this.prevButton.TabIndex = 23;
+            this.prevButton.Text = "Previous";
+            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
+            // 
             // nextButton
             // 
             this.nextButton.Animated = true;
@@ -113,6 +135,7 @@
             this.nextButton.Size = new System.Drawing.Size(147, 37);
             this.nextButton.TabIndex = 22;
             this.nextButton.Text = "Next";
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -146,9 +169,11 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.insuranceText);
+            this.guna2Panel1.Controls.Add(this.roundtripText);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.nameText);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.taxText);
+            this.guna2Panel1.Controls.Add(this.totalProcessingFeeText);
             this.guna2Panel1.Controls.Add(this.discountText);
             this.guna2Panel1.Controls.Add(this.label27);
             this.guna2Panel1.Controls.Add(this.label26);
@@ -176,67 +201,67 @@
             this.guna2Panel1.Size = new System.Drawing.Size(658, 460);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // insuranceText
+            // roundtripText
             // 
-            this.insuranceText.AutoSize = true;
-            this.insuranceText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.insuranceText.Location = new System.Drawing.Point(127, 82);
-            this.insuranceText.Name = "insuranceText";
-            this.insuranceText.Size = new System.Drawing.Size(140, 23);
-            this.insuranceText.TabIndex = 62;
-            this.insuranceText.Text = "True/False";
+            this.roundtripText.AutoSize = true;
+            this.roundtripText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundtripText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.roundtripText.Location = new System.Drawing.Point(495, 86);
+            this.roundtripText.Name = "roundtripText";
+            this.roundtripText.Size = new System.Drawing.Size(98, 17);
+            this.roundtripText.TabIndex = 64;
+            this.roundtripText.Text = "True/False";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label4.Location = new System.Drawing.Point(391, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 17);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Roundtrip:";
+            // 
+            // nameText
+            // 
+            this.nameText.AutoSize = true;
+            this.nameText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.nameText.Location = new System.Drawing.Point(82, 17);
+            this.nameText.Name = "nameText";
+            this.nameText.Size = new System.Drawing.Size(89, 17);
+            this.nameText.TabIndex = 62;
+            this.nameText.Text = "Name Here";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(23, 86);
+            this.label2.Location = new System.Drawing.Point(23, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 61;
-            this.label2.Text = "Insurance:";
-            // 
-            // taxText
-            // 
-            this.taxText.AutoSize = true;
-            this.taxText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.taxText.Location = new System.Drawing.Point(557, 290);
-            this.taxText.Name = "taxText";
-            this.taxText.Size = new System.Drawing.Size(78, 18);
-            this.taxText.TabIndex = 60;
-            this.taxText.Text = "9999.00";
+            this.label2.Text = "Name:";
             // 
             // discountText
             // 
             this.discountText.AutoSize = true;
             this.discountText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discountText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.discountText.Location = new System.Drawing.Point(557, 260);
+            this.discountText.Location = new System.Drawing.Point(557, 284);
             this.discountText.Name = "discountText";
             this.discountText.Size = new System.Drawing.Size(78, 18);
             this.discountText.TabIndex = 59;
             this.discountText.Text = "9999.00";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label27.Location = new System.Drawing.Point(23, 290);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 17);
-            this.label27.TabIndex = 58;
-            this.label27.Text = "Total Tax";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label26.Location = new System.Drawing.Point(23, 260);
+            this.label26.Location = new System.Drawing.Point(23, 284);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(134, 17);
             this.label26.TabIndex = 57;
@@ -291,7 +316,7 @@
             this.insuranceFeeText.AutoSize = true;
             this.insuranceFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.insuranceFeeText.Location = new System.Drawing.Point(557, 230);
+            this.insuranceFeeText.Location = new System.Drawing.Point(557, 254);
             this.insuranceFeeText.Name = "insuranceFeeText";
             this.insuranceFeeText.Size = new System.Drawing.Size(78, 18);
             this.insuranceFeeText.TabIndex = 52;
@@ -328,7 +353,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label20.Location = new System.Drawing.Point(23, 230);
+            this.label20.Location = new System.Drawing.Point(23, 254);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(152, 17);
             this.label20.TabIndex = 47;
@@ -370,22 +395,22 @@
             // toText
             // 
             this.toText.AutoSize = true;
-            this.toText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.toText.Location = new System.Drawing.Point(432, 11);
+            this.toText.Location = new System.Drawing.Point(432, 52);
             this.toText.Name = "toText";
-            this.toText.Size = new System.Drawing.Size(179, 23);
+            this.toText.Size = new System.Drawing.Size(125, 17);
             this.toText.TabIndex = 42;
             this.toText.Text = "Location here";
             // 
             // classText
             // 
             this.classText.AutoSize = true;
-            this.classText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.classText.Location = new System.Drawing.Point(459, 46);
+            this.classText.Location = new System.Drawing.Point(91, 86);
             this.classText.Name = "classText";
-            this.classText.Size = new System.Drawing.Size(140, 23);
+            this.classText.Size = new System.Drawing.Size(98, 17);
             this.classText.TabIndex = 39;
             this.classText.Text = "Class Here";
             // 
@@ -394,7 +419,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(391, 52);
+            this.label11.Location = new System.Drawing.Point(23, 86);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 17);
             this.label11.TabIndex = 38;
@@ -405,7 +430,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label15.Location = new System.Drawing.Point(391, 16);
+            this.label15.Location = new System.Drawing.Point(391, 52);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 17);
             this.label15.TabIndex = 36;
@@ -414,11 +439,11 @@
             // dateText
             // 
             this.dateText.AutoSize = true;
-            this.dateText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.dateText.Location = new System.Drawing.Point(84, 46);
+            this.dateText.Location = new System.Drawing.Point(450, 17);
             this.dateText.Name = "dateText";
-            this.dateText.Size = new System.Drawing.Size(127, 23);
+            this.dateText.Size = new System.Drawing.Size(89, 17);
             this.dateText.TabIndex = 29;
             this.dateText.Text = "Date here";
             // 
@@ -427,7 +452,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(23, 52);
+            this.label8.Location = new System.Drawing.Point(391, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 28;
@@ -436,11 +461,11 @@
             // fromText
             // 
             this.fromText.AutoSize = true;
-            this.fromText.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromText.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fromText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.fromText.Location = new System.Drawing.Point(82, 11);
+            this.fromText.Location = new System.Drawing.Point(82, 52);
             this.fromText.Name = "fromText";
-            this.fromText.Size = new System.Drawing.Size(179, 23);
+            this.fromText.Size = new System.Drawing.Size(125, 17);
             this.fromText.TabIndex = 25;
             this.fromText.Text = "Location here";
             // 
@@ -449,7 +474,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(23, 16);
+            this.label5.Location = new System.Drawing.Point(23, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 23;
@@ -479,6 +504,7 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.exitProgram);
             // 
             // guna2ControlBox1
             // 
@@ -647,24 +673,27 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // prevButton
+            // totalProcessingFeeText
             // 
-            this.prevButton.Animated = true;
-            this.prevButton.BorderRadius = 15;
-            this.prevButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.prevButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.prevButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.prevButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.prevButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.prevButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prevButton.ForeColor = System.Drawing.Color.White;
-            this.prevButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.prevButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.prevButton.Location = new System.Drawing.Point(211, 654);
-            this.prevButton.Name = "prevButton";
-            this.prevButton.Size = new System.Drawing.Size(147, 37);
-            this.prevButton.TabIndex = 23;
-            this.prevButton.Text = "Previous";
+            this.totalProcessingFeeText.AutoSize = true;
+            this.totalProcessingFeeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalProcessingFeeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.totalProcessingFeeText.Location = new System.Drawing.Point(557, 226);
+            this.totalProcessingFeeText.Name = "totalProcessingFeeText";
+            this.totalProcessingFeeText.Size = new System.Drawing.Size(78, 18);
+            this.totalProcessingFeeText.TabIndex = 60;
+            this.totalProcessingFeeText.Text = "9999.00";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label27.Location = new System.Drawing.Point(23, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(188, 17);
+            this.label27.TabIndex = 58;
+            this.label27.Text = "Total Processing Fee";
             // 
             // Receipt
             // 
@@ -711,9 +740,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label controlNumberLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label taxText;
         private System.Windows.Forms.Label discountText;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label busFeeText;
         private System.Windows.Forms.Label standardFeeText;
@@ -735,8 +762,12 @@
         private System.Windows.Forms.Label fromText;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button nextButton;
-        private System.Windows.Forms.Label insuranceText;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button prevButton;
+        private System.Windows.Forms.Label roundtripText;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label nameText;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label totalProcessingFeeText;
+        private System.Windows.Forms.Label label27;
     }
 }

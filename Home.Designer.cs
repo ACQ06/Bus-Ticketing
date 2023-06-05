@@ -32,14 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,9 +51,10 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.UpcomingDate = new System.Windows.Forms.Label();
             this.UpcomingDestination = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -64,19 +68,15 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.guna2CustomGradientPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -108,6 +108,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(200, 89);
             this.panel9.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.label15.Location = new System.Drawing.Point(4, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(170, 17);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Availability: SOON";
             // 
             // label11
             // 
@@ -154,6 +165,17 @@
             this.panel8.Size = new System.Drawing.Size(200, 89);
             this.panel8.TabIndex = 19;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.label14.Location = new System.Drawing.Point(4, 66);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(170, 17);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Availability: SOON";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -198,6 +220,17 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(295, 89);
             this.panel7.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.label2.Location = new System.Drawing.Point(4, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Availability: SOON";
             // 
             // label5
             // 
@@ -313,6 +346,31 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(734, 300);
             this.guna2CustomGradientPanel1.TabIndex = 16;
             // 
+            // guna2CustomGradientPanel5
+            // 
+            this.guna2CustomGradientPanel5.BorderRadius = 10;
+            this.guna2CustomGradientPanel5.Controls.Add(this.label4);
+            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDate);
+            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDestination);
+            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(3, 208);
+            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(728, 89);
+            this.guna2CustomGradientPanel5.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(15, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(277, 37);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Upcoming Trip";
+            // 
             // UpcomingDate
             // 
             this.UpcomingDate.AutoSize = true;
@@ -334,17 +392,6 @@
             this.UpcomingDestination.Size = new System.Drawing.Size(89, 17);
             this.UpcomingDestination.TabIndex = 16;
             this.UpcomingDestination.Text = "From - To";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 37);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Upcoming Trip";
             // 
             // panel3
             // 
@@ -370,6 +417,7 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.exitProgram);
             this.guna2ControlBox2.MouseEnter += new System.EventHandler(this.handCursor);
             this.guna2ControlBox2.MouseLeave += new System.EventHandler(this.defaultCursor);
             // 
@@ -539,53 +587,6 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2CustomGradientPanel5
-            // 
-            this.guna2CustomGradientPanel5.BorderRadius = 10;
-            this.guna2CustomGradientPanel5.Controls.Add(this.label4);
-            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDate);
-            this.guna2CustomGradientPanel5.Controls.Add(this.UpcomingDestination);
-            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(3, 208);
-            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(728, 89);
-            this.guna2CustomGradientPanel5.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label2.Location = new System.Drawing.Point(4, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 17);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Availability: SOON";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label14.Location = new System.Drawing.Point(4, 66);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(170, 17);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Availability: SOON";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label15.Location = new System.Drawing.Point(4, 66);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(170, 17);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Availability: SOON";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,12 +610,12 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel5.ResumeLayout(false);
+            this.guna2CustomGradientPanel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.guna2CustomGradientPanel5.ResumeLayout(false);
-            this.guna2CustomGradientPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

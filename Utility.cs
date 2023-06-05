@@ -127,13 +127,16 @@ namespace Bus_Ticketing
             return stringBuilder.ToString();
         }
     }
-
-    //DO COMPUTATION HERE
     public class Charge
     {
-        //GET THE PASSENGER DETAILS FROM THE SQL USING THE USERID AND CONTROL NUMBER AS A FILTER FOR SQL LOOKUP
-        //NOTE: IT SHOULD BE PER PASSENGER
-        public static double computeBusFee(string From, string To, char busType)
+        /// <summary>
+        /// Computes the bus fee
+        /// </summary>
+        /// <param name="From">Destination from</param>
+        /// <param name="To">Destination to</param>
+        /// <param name="busType">Bus class</param>
+        /// <returns>Bus fee</returns>
+        public static double computeBusFee(string From, string To, char busType, bool IsRoundtrip)
         {
             double busFee = 0;
 
@@ -250,16 +253,32 @@ namespace Bus_Ticketing
                 }
             }
 
+            if (IsRoundtrip) busFee *= 2;
 
             return busFee;
         }
 
+        /// <summary>
+        /// Computes the processing fee
+        /// </summary>
+        /// <param name="From">Destination from</param>
+        /// <param name="To">Destination to</param>
+        /// <param name="busType">Bus class</param>
+        /// <returns>Processing fee</returns>
         public static double computeStandardProcessingFee(string From, string To, char busType)
         {
             double standardProcessingFee = 85;
             return standardProcessingFee;
         }
 
+
+        /// <summary>
+        /// Computes the addtional processing fee
+        /// </summary>
+        /// <param name="From"></param>
+        /// <param name="IsRoundtrip"></param>
+        /// <param name="busType"></param>
+        /// <returns></returns>
         public static double computeAdditionalProcessingFee(string From, bool IsRoundtrip, char busType)
         {
             double additionalProcessingFee = 0;
@@ -288,9 +307,19 @@ namespace Bus_Ticketing
             return additionalProcessingFee;
         }
 
-        public static double computeInsuranceFee(char busType)
+        /// <summary>
+        /// Computes the insurance
+        /// </summary>
+        /// <param name="busType">Bus class</param>
+        /// <returns>Insurance</returns>
+        public static double computeInsuranceFee(char busType, bool isInsured)
         {
             double insuranceFee = 0;
+
+            if (!isInsured)
+            {
+                return insuranceFee;
+            }
 
             switch (busType)
             {
@@ -315,41 +344,53 @@ namespace Bus_Ticketing
             return insuranceFee;
         }
 
-//        public static double computeTotalDiscount(int age)
-//        {
-//            double totalDiscount = 0;
-
-//            if (age > 59)
-//            {
-//                totalDiscount = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) * .12;
-//)           }
-
-//            return totalDiscount;
-//        }
-
-        /* NOT NEEDED ANYMORE
-        public static double computeTotalTax()
+        /// <summary>
+        /// Computes the total discount
+        /// </summary>
+        /// <param name="age">Age of the passenger</param>
+        /// <param name="spf">Standard processing fee</param>
+        /// <param name="apf">Additional processing fee</param>
+        /// <returns>Total discount</returns>
+        public static double computeTotalDiscount(int age, double spf, double apf)
         {
-            double totalTax = 0;
-            return totalTax;
-        }
-        */
+            double totalDiscount = 0;
 
-        public static double computeTotalCharge()
+            if (age > 59)
+            {
+                totalDiscount = (spf + apf) * .12;
+            }
+
+            return totalDiscount;
+        }
+
+        /// <summary>
+        /// Computes total processing fee
+        /// </summary>
+        /// <param name="spf">Standard processing fee</param>
+        /// <param name="apf">Additonal processing fee</param>
+        /// <param name="totalDiscount">Total discount</param>
+        /// <returns>Total processing fee</returns>
+        public static double computeTotalProcessingFee(double spf, double apf, double totalDiscount)
         {
             double totalCharge = 0;
 
-            //totalCharge = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) - computeTotalDiscount(/*insert SQL statement*/);
+            totalCharge = (spf + apf) - totalDiscount;
 
             return totalCharge;
         }
 
-        //add SQL
-        public static double computeFinalCharges()
+        /// <summary>
+        /// Computes Total Charges
+        /// </summary>
+        /// <param name="busFee">Bus fee</param>
+        /// <param name="insuranceFee">Insurance fee</param>
+        /// <param name="totalCharge">Total charge</param>
+        /// <returns>Total charge</returns>
+        public static double computeFinalCharges(double busFee, double insuranceFee, double totalProcessingFee)
         {
             double finalCharges = 0;
 
-            finalCharges = (computeBusFee() + computeInsuranceFee() + computeTotalCharge());
+            finalCharges = (busFee + insuranceFee + totalProcessingFee);
 
             return finalCharges;
         }

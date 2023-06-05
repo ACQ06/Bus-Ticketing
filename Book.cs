@@ -16,11 +16,8 @@ namespace Bus_Ticketing
     public partial class Book : Form
     {
         Passenger passenger = new Passenger();
-
         List<Passenger> allPassenger = new List<Passenger>();
-
         bool hasClass;
-
         Dictionary<char, int> classSize = new Dictionary<char, int>
         {
             {'A', 0},
@@ -28,8 +25,6 @@ namespace Bus_Ticketing
             {'C', 0},
             {'D', 0}
         };
-
-
         Dictionary<char, int> classSizeLimit = new Dictionary<char, int>
         {
             {'A', 21},
@@ -37,12 +32,10 @@ namespace Bus_Ticketing
             {'C', 55},
             {'D', 8}
         };
-
         public Book()
         {
             InitializeComponent();
         }
-
 
         //CUSTOM CONTROL BAR BELOW
         private Point lastMousePosition;
@@ -85,6 +78,12 @@ namespace Bus_Ticketing
         {
             Cursor = Cursors.Default;
         }
+        private void exitProgram(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //FORM METHODS
         private void payButton_Click(object sender, EventArgs e)
         {
             if (allPassenger.Count == 0)
@@ -116,14 +115,28 @@ namespace Bus_Ticketing
                         string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
                         MySqlConnection myConn = new MySqlConnection(myConnection);
                         MySqlCommand InsertCommand = myConn.CreateCommand();
-                        InsertCommand.CommandText = "" +
-                            "INSERT INTO bus_data.transaction_info(userid,ctrlNumber,class,`to`,`from`,date,roundtrip,insurance,lastname,firstname,mi,alias,age)" +
-                            $"VALUES ('{User.id}','{Passenger.controlNumber}','{passenger.Class_}','{passenger.To}','{passenger.From}','{passenger.Date}','{passenger.IsRoundtrip}','{passenger.IsInsurance}','{passenger.Lastname}','{passenger.Firstname}','{passenger.MiddleInitial}','{passenger.Alias}','{passenger.Age}')";
+                        InsertCommand.CommandText = "INSERT INTO bus_data.transaction_info(userid, ctrlNumber, class, `to`, `from`, date, roundtrip, insurance, lastname, firstname, mi, alias, age) " +
+                                                    "VALUES (@userid, @ctrlNumber, @class, @to, @from, @date, @roundtrip, @insurance, @lastname, @firstname, @mi, @alias, @age)";
+
+                        // Set parameter values
+                        InsertCommand.Parameters.AddWithValue("@userid", User.id);
+                        InsertCommand.Parameters.AddWithValue("@ctrlNumber", Passenger.controlNumber);
+                        InsertCommand.Parameters.AddWithValue("@class", passenger.Class_);
+                        InsertCommand.Parameters.AddWithValue("@to", passenger.To);
+                        InsertCommand.Parameters.AddWithValue("@from", passenger.From);
+                        InsertCommand.Parameters.AddWithValue("@date", passenger.Date);
+                        InsertCommand.Parameters.AddWithValue("@roundtrip", passenger.IsRoundtrip);
+                        InsertCommand.Parameters.AddWithValue("@insurance", passenger.IsInsurance);
+                        InsertCommand.Parameters.AddWithValue("@lastname", passenger.Lastname);
+                        InsertCommand.Parameters.AddWithValue("@firstname", passenger.Firstname);
+                        InsertCommand.Parameters.AddWithValue("@mi", passenger.MiddleInitial);
+                        InsertCommand.Parameters.AddWithValue("@alias", passenger.Alias);
+                        InsertCommand.Parameters.AddWithValue("@age", passenger.Age);
+
                         myConn.Open();
                         InsertCommand.ExecuteNonQuery();
                         myConn.Close();
                     }
-
                     catch (Exception s)
                     {
                         MessageBox.Show(s.Message);
@@ -185,7 +198,7 @@ namespace Bus_Ticketing
             {
                 fromInput.SelectedIndexChanged -= fromInput_SelectedIndexChanged;
                 resetChoices();
-                showAllClasses();
+                resetForm();
                 hideAllForms();
                 fromInput.SelectedIndexChanged += fromInput_SelectedIndexChanged;
                 return;
@@ -202,7 +215,7 @@ namespace Bus_Ticketing
             {
                 toInput.SelectedIndexChanged -= toInput_SelectedIndexChanged;
                 resetChoices();
-                showAllClasses();
+                resetForm();
                 hideAllForms();
                 toInput.SelectedIndexChanged += toInput_SelectedIndexChanged;
                 return;
@@ -314,6 +327,7 @@ namespace Bus_Ticketing
             catch
             {
                 MessageBox.Show("Invalid Age");
+                return;
             }
             
 
@@ -356,7 +370,7 @@ namespace Bus_Ticketing
                 string.IsNullOrEmpty(lastnameInput.Text) &&
                 string.IsNullOrEmpty(firstnameInput.Text) &&
                 string.IsNullOrEmpty(miInput.Text) &&
-                string.IsNullOrEmpty(ageInput.Text))
+                string.IsNullOrEmpty(ageInput.Text))    
             {
                 MessageBox.Show("Input Necessary Details");
                 return false;
@@ -485,7 +499,7 @@ namespace Bus_Ticketing
                     break;
             }
         }
-        private void showAllClasses()
+        private void resetForm()
         {
             classA.Show();
             classB.Show();
@@ -496,6 +510,13 @@ namespace Bus_Ticketing
             classB.Checked = false;
             classC.Checked = false;
             classD.Checked = false;
+            roundtripInput.Checked = false;
+            insuranceInput.Checked = false;
+            lastnameInput.Text = null;
+            firstnameInput.Text = null;
+            miInput.Text = null;
+            aliasInput.Text = null;
+            ageInput.Text = null;
         }
         private void hideAllForms()
         {
