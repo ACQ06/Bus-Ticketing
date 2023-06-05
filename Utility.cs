@@ -312,17 +312,17 @@ namespace Bus_Ticketing
             return insuranceFee;
         }
 
-        public static double computeTotalDiscount(int age)
-        {
-            double totalDiscount = 0;
+//        public static double computeTotalDiscount(int age)
+//        {
+//            double totalDiscount = 0;
 
-            if (age > 59)
-            {
-                totalDiscount = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) * .12;
-)           }
+//            if (age > 59)
+//            {
+//                totalDiscount = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) * .12;
+//)           }
 
-            return totalDiscount;
-        }
+//            return totalDiscount;
+//        }
 
         /* NOT NEEDED ANYMORE
         public static double computeTotalTax()
@@ -336,7 +336,7 @@ namespace Bus_Ticketing
         {
             double totalCharge = 0;
 
-            totalCharge = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) - computeTotalDiscount(/*insert SQL statement*/);
+            //totalCharge = (computeStandardProcessingFee(/*insert SQL statement*/) + computeAdditionalProcessingFee(/*insert SQL statement*/)) - computeTotalDiscount(/*insert SQL statement*/);
 
             return totalCharge;
         }

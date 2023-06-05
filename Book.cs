@@ -21,6 +21,23 @@ namespace Bus_Ticketing
 
         bool hasClass;
 
+        Dictionary<char, int> classSize = new Dictionary<char, int>
+        {
+            {'A', 0},
+            {'B', 0},
+            {'C', 0},
+            {'D', 0}
+        };
+
+
+        Dictionary<char, int> classSizeLimit = new Dictionary<char, int>
+        {
+            {'A', 21},
+            {'B', 36},
+            {'C', 55},
+            {'D', 8}
+        };
+
         public Book()
         {
             InitializeComponent();
@@ -38,7 +55,6 @@ namespace Bus_Ticketing
                 isDragging = true;
             }
         }
-
         private void controlbar_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -46,7 +62,6 @@ namespace Bus_Ticketing
                 isDragging = false;
             }
         }
-
         private void controlbar_MouseMove(object sender, MouseEventArgs e)
         {
             if (isDragging)
@@ -62,19 +77,22 @@ namespace Bus_Ticketing
                 parentForm.Location = new Point(parentForm.Location.X + offsetX, parentForm.Location.Y + offsetY);
             }
         }
-
         private void handCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
         }
-
         private void defaultCursor(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
         }
-
         private void payButton_Click(object sender, EventArgs e)
         {
+            if (allPassenger.Count == 0)
+            {
+                MessageBox.Show("Add a passenger");
+                return;
+            }
+
             if (!isAccompanied())
             {
                 MessageBox.Show("Child cannot travel alone must be accompanied by at least one (1) Adult and or Senior Citizen");
@@ -137,7 +155,6 @@ namespace Bus_Ticketing
 
             return false;
         }
-
         private void homeButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.home);
@@ -158,7 +175,9 @@ namespace Bus_Ticketing
         private void Book_Load(object sender, EventArgs e)
         {
             fullnameText.Text = User.fullname;
+            updateClassCount();
             Passenger.controlNumber = ControlNumber.generate();
+            hideForm();
         }
         private void fromInput_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -166,6 +185,8 @@ namespace Bus_Ticketing
             {
                 fromInput.SelectedIndexChanged -= fromInput_SelectedIndexChanged;
                 resetChoices();
+                showAllClasses();
+                hideAllForms();
                 fromInput.SelectedIndexChanged += fromInput_SelectedIndexChanged;
                 return;
             }
@@ -173,6 +194,7 @@ namespace Bus_Ticketing
             List<string> removeChoice = getDestination(fromInput.Text);
 
             foreach (string items in removeChoice) toInput.Items.Remove(items);
+            showHalfForm();
         }
         private void toInput_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -180,6 +202,8 @@ namespace Bus_Ticketing
             {
                 toInput.SelectedIndexChanged -= toInput_SelectedIndexChanged;
                 resetChoices();
+                showAllClasses();
+                hideAllForms();
                 toInput.SelectedIndexChanged += toInput_SelectedIndexChanged;
                 return;
             }
@@ -188,6 +212,7 @@ namespace Bus_Ticketing
             List<string> removeChoice = getDestination(toInput.Text);
 
             foreach(string items in removeChoice) fromInput.Items.Remove(items);
+            showHalfForm();
         }
         public void resetChoices()
         {
@@ -240,21 +265,25 @@ namespace Bus_Ticketing
         {
             passenger.Class_ = 'A';
             hasClass = true;
+            showPassengerDetails();
         }
         private void classB_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'B';
             hasClass = true;
+            showPassengerDetails();
         }
         private void classC_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'C';
             hasClass = true;
+            showPassengerDetails();
         }
         private void classD_CheckedChanged(object sender, EventArgs e)
         {
             passenger.Class_ = 'D';
             hasClass = true;
+            showPassengerDetails();
         }
         private void roundtripInput_CheckedChanged(object sender, EventArgs e)
         {
@@ -266,10 +295,8 @@ namespace Bus_Ticketing
         }
         private void addButton_Click(object sender, EventArgs e)
         {
-
             if (!isCompleteForm()) 
             {
-                MessageBox.Show("Complete the required information");
                 return;
             };
 
@@ -278,13 +305,36 @@ namespace Bus_Ticketing
             passenger.Firstname = firstnameInput.Text;
             passenger.MiddleInitial = miInput.Text[0];
             passenger.Alias = aliasInput.Text;
-            passenger.Age = Int32.Parse(ageInput.Text);
 
+            try
+            {
+                passenger.Age = Int32.Parse(ageInput.Text);
+            }
+
+            catch
+            {
+                MessageBox.Show("Invalid Age");
+            }
+            
+
+            if (exceedClassSize(passenger.Class_))
+            {
+                MessageBox.Show("Sorry… you  have exceeded the number of passengers required");
+                return;
+            }
+            
             allPassenger.Add(passenger);
+            classSize[passenger.Class_]++;
+            updateClassCount();
+
             passenger = new Passenger();
             resetInfos();
         }
-        public void resetInfos()
+        private bool exceedClassSize(char class_)
+        {
+            return classSize[class_] == classSizeLimit[class_];
+        }
+        private void resetInfos()
         {
             resetChoices();
             classA.Checked = false;
@@ -299,38 +349,168 @@ namespace Bus_Ticketing
             aliasInput.Clear();
             ageInput.Clear();
         }
-        public bool isCompleteForm()
+        private bool isCompleteForm()
         {
+            if ((fromInput.SelectedIndex <= 0 || toInput.SelectedIndex <= 0) &&
+                !hasClass &&
+                string.IsNullOrEmpty(lastnameInput.Text) &&
+                string.IsNullOrEmpty(firstnameInput.Text) &&
+                string.IsNullOrEmpty(miInput.Text) &&
+                string.IsNullOrEmpty(ageInput.Text))
+            {
+                MessageBox.Show("Input Necessary Details");
+                return false;
+            }
+
             if (fromInput.SelectedIndex <= 0 || toInput.SelectedIndex <= 0)
             {
+                MessageBox.Show("Input Travel Destination / No Trip Available");
                 return false;
             }
 
             if (!hasClass)
             {
+                MessageBox.Show("Invalid Input");
                 return false;
             }
 
             if (string.IsNullOrEmpty(lastnameInput.Text))
             {
+                MessageBox.Show("Invalid Input");
                 return false;
             }
 
             if (string.IsNullOrEmpty(firstnameInput.Text))
             {
+                MessageBox.Show("Invalid Input");
                 return false;
             }
 
             if (string.IsNullOrEmpty(miInput.Text))
             {
+                MessageBox.Show("Invalid Input");
                 return false;
             }
 
             if (string.IsNullOrEmpty(ageInput.Text))
             {
+                MessageBox.Show("Invalid Input");
                 return false;
             }
+
             return true;
+        }
+        private void hideForm()
+        {
+            classPanel.Hide();
+            dateInput.Hide();
+            roundtripPanel.Hide();
+            insurancePanel.Hide();
+            passDetailsPanel.Hide();
+        }
+        private void showHalfForm()
+        {
+            showLimitedClass();
+            if(fromInput.SelectedIndex == 0 || toInput.SelectedIndex == 0) return;
+            classPanel.Show();
+            dateInput.Show();
+            roundtripPanel.Show();
+            insurancePanel.Show();
+        }
+        private void showPassengerDetails()
+        {
+            if (!hasClass) return;
+            passDetailsPanel.Show();
+        }
+        private void showLimitedClass()
+        {
+            if(toInput.SelectedIndex == 0 || fromInput.SelectedIndex == 0)
+            {
+                return;
+            }
+
+            switch (passenger.From)
+            {
+                case "Manila":
+                    switch (passenger.To)
+                    {
+                        case "Ilocos":
+                            classB.Hide();
+                            classC.Hide();
+                            break;
+
+                        case "Pampanga":
+                            classA.Hide();
+                            break;
+
+                        case "Zambales":
+                            classA.Hide();
+                            classC.Hide();
+                            classD.Hide();
+                            break;
+
+                        case "Baguio":
+                            classB.Hide();
+                            break;
+
+                        case "Tugegarao":
+                            classC.Hide();
+                            classD.Hide();
+                            break;
+                    }
+                    break;
+
+                case "Ilocos":
+                    classB.Hide();
+                    classC.Hide();
+                    break;
+
+                case "Pampanga":
+                    classA.Hide();
+                    break;
+
+                case "Zambales":
+                    classA.Hide();
+                    classC.Hide();
+                    classD.Hide();
+                    break;
+
+                case "Baguio":
+                    classB.Hide();
+                    break;
+
+                case "Tugegarao":
+                    classC.Hide();
+                    classD.Hide();
+                    break;
+            }
+        }
+        private void showAllClasses()
+        {
+            classA.Show();
+            classB.Show();
+            classC.Show();
+            classD.Show();
+
+            classA.Checked = false;
+            classB.Checked = false;
+            classC.Checked = false;
+            classD.Checked = false;
+        }
+        private void hideAllForms()
+        {
+            classPanel.Hide();
+            dateInput.Hide();
+            roundtripPanel.Hide();
+            insurancePanel.Hide();
+            passDetailsPanel.Hide();
+        }
+        private void updateClassCount()
+        {
+            countA.Text = $"{classSize['A']}/{classSizeLimit['A']}";
+            countB.Text = $"{classSize['B']}/{classSizeLimit['B']}";
+            countC.Text = $"{classSize['C']}/{classSizeLimit['C']}";
+            countD.Text = $"{classSize['D']}/{classSizeLimit['D']}";
         }
     }
 }
