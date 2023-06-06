@@ -76,7 +76,6 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.payButton = new Guna.UI2.WinForms.Guna2Button();
             this.payInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -91,7 +90,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.prevButton);
             this.panel2.Controls.Add(this.nextButton);
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
@@ -705,20 +703,6 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 24;
-            this.guna2Button1.Text = "guna2Button1";
-            // 
             // payButton
             // 
             this.payButton.BorderRadius = 15;
@@ -852,7 +836,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label totalProcessingFeeText;
         private System.Windows.Forms.Label label27;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox payInput;
         private Guna.UI2.WinForms.Guna2Button payButton;
         private System.Windows.Forms.Label totalTransactionCharge;

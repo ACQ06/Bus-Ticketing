@@ -36,6 +36,8 @@ namespace Bus_Ticketing
         public Book()
         {
             InitializeComponent();
+
+            dateInput.MinDate = DateTime.Today;
         }
 
         //CUSTOM CONTROL BAR BELOW

@@ -230,11 +230,13 @@ namespace Bus_Ticketing
             if (payInput == null)
             {
                 MessageBox.Show("Please input your payment");
+                return;
             }
 
             if (Int32.Parse(payInput.Text) < Int32.Parse(totalTransactionCharge.Text))
             {
                 MessageBox.Show("Insufficient Payment");
+                return;
             }
 
             try
@@ -242,14 +244,14 @@ namespace Bus_Ticketing
                 string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
                 using (MySqlConnection myConn = new MySqlConnection(myConnection))
                 {
-                    string updateQuery = $"UPDATE bus_data.transaction_info SET paid = 0 WHERE ctrlNumber = '{Passenger.controlNumber}' AND userid = {User.id};";
+                    string updateQuery = $"UPDATE bus_data.transaction_info SET paid = 1 WHERE ctrlNumber = '{Passenger.controlNumber}' AND userid = {User.id};";
                     MySqlCommand updateCommand = new MySqlCommand(updateQuery, myConn);
 
                     myConn.Open();
                     updateCommand.ExecuteNonQuery();
                     myConn.Close();
                 }
-
+                MessageBox.Show($"Successfully Paid!\nHere is your change {Int32.Parse(payInput.Text) - Int32.Parse(totalTransactionCharge.Text)}");
             }
 
             catch (Exception ex)
@@ -257,7 +259,8 @@ namespace Bus_Ticketing
                 MessageBox.Show(ex.Message);
             }
 
-            MessageBox.Show($"Successfully Paid!\nHere is your change {Int32.Parse(totalTransactionCharge.Text) - Int32.Parse(payInput.Text)}");
+            payButton.Hide();
+            payInput.Hide();
         }
     }
 }
