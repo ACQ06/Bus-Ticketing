@@ -43,21 +43,21 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.upcomingPanel = new System.Windows.Forms.Panel();
             this.UpcomingDate = new System.Windows.Forms.Label();
-            this.UpcomingDestination = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.upcomingControlNumber = new System.Windows.Forms.Label();
+            this.upcomingTitleLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.subPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.subPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.subPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.subDetail1 = new System.Windows.Forms.Panel();
+            this.subDate1 = new System.Windows.Forms.Label();
+            this.subControl1 = new System.Windows.Forms.Label();
+            this.subDetail2 = new System.Windows.Forms.Panel();
+            this.subDate2 = new System.Windows.Forms.Label();
+            this.subControl2 = new System.Windows.Forms.Label();
+            this.subDetail3 = new System.Windows.Forms.Panel();
+            this.subDate3 = new System.Windows.Forms.Label();
+            this.subControl3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -66,9 +66,9 @@
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.upcomingPanel.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.subDetail1.SuspendLayout();
+            this.subDetail2.SuspendLayout();
+            this.subDetail3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -243,8 +243,8 @@
             // 
             this.upcomingPanel.BackColor = System.Drawing.Color.Transparent;
             this.upcomingPanel.Controls.Add(this.UpcomingDate);
-            this.upcomingPanel.Controls.Add(this.UpcomingDestination);
-            this.upcomingPanel.Controls.Add(this.label4);
+            this.upcomingPanel.Controls.Add(this.upcomingControlNumber);
+            this.upcomingPanel.Controls.Add(this.upcomingTitleLabel);
             this.upcomingPanel.Location = new System.Drawing.Point(3, 207);
             this.upcomingPanel.Name = "upcomingPanel";
             this.upcomingPanel.Size = new System.Drawing.Size(728, 90);
@@ -261,27 +261,27 @@
             this.UpcomingDate.TabIndex = 17;
             this.UpcomingDate.Text = "Date";
             // 
-            // UpcomingDestination
+            // upcomingControlNumber
             // 
-            this.UpcomingDestination.AutoSize = true;
-            this.UpcomingDestination.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpcomingDestination.ForeColor = System.Drawing.Color.White;
-            this.UpcomingDestination.Location = new System.Drawing.Point(19, 46);
-            this.UpcomingDestination.Name = "UpcomingDestination";
-            this.UpcomingDestination.Size = new System.Drawing.Size(89, 17);
-            this.UpcomingDestination.TabIndex = 16;
-            this.UpcomingDestination.Text = "From - To";
+            this.upcomingControlNumber.AutoSize = true;
+            this.upcomingControlNumber.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upcomingControlNumber.ForeColor = System.Drawing.Color.White;
+            this.upcomingControlNumber.Location = new System.Drawing.Point(19, 46);
+            this.upcomingControlNumber.Name = "upcomingControlNumber";
+            this.upcomingControlNumber.Size = new System.Drawing.Size(134, 17);
+            this.upcomingControlNumber.TabIndex = 16;
+            this.upcomingControlNumber.Text = "Control Number";
             // 
-            // label4
+            // upcomingTitleLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 37);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Upcoming Trip";
+            this.upcomingTitleLabel.AutoSize = true;
+            this.upcomingTitleLabel.Font = new System.Drawing.Font("Courier New", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upcomingTitleLabel.ForeColor = System.Drawing.Color.White;
+            this.upcomingTitleLabel.Location = new System.Drawing.Point(15, 9);
+            this.upcomingTitleLabel.Name = "upcomingTitleLabel";
+            this.upcomingTitleLabel.Size = new System.Drawing.Size(277, 37);
+            this.upcomingTitleLabel.TabIndex = 15;
+            this.upcomingTitleLabel.Text = "Upcoming Trip";
             // 
             // label3
             // 
@@ -294,146 +294,146 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Others";
             // 
-            // guna2CustomGradientPanel2
+            // subPanel1
             // 
-            this.guna2CustomGradientPanel2.BorderRadius = 10;
-            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(28, 435);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(295, 200);
-            this.guna2CustomGradientPanel2.TabIndex = 19;
+            this.subPanel1.BorderRadius = 10;
+            this.subPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel1.Location = new System.Drawing.Point(28, 435);
+            this.subPanel1.Name = "subPanel1";
+            this.subPanel1.Size = new System.Drawing.Size(295, 200);
+            this.subPanel1.TabIndex = 19;
             // 
-            // guna2CustomGradientPanel3
+            // subPanel2
             // 
-            this.guna2CustomGradientPanel3.BorderRadius = 10;
-            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(342, 435);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(200, 200);
-            this.guna2CustomGradientPanel3.TabIndex = 20;
+            this.subPanel2.BorderRadius = 10;
+            this.subPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel2.Location = new System.Drawing.Point(342, 435);
+            this.subPanel2.Name = "subPanel2";
+            this.subPanel2.Size = new System.Drawing.Size(200, 200);
+            this.subPanel2.TabIndex = 20;
             // 
-            // guna2CustomGradientPanel4
+            // subPanel3
             // 
-            this.guna2CustomGradientPanel4.BorderRadius = 10;
-            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(559, 435);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(200, 200);
-            this.guna2CustomGradientPanel4.TabIndex = 21;
+            this.subPanel3.BorderRadius = 10;
+            this.subPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.subPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.subPanel3.Location = new System.Drawing.Point(559, 435);
+            this.subPanel3.Name = "subPanel3";
+            this.subPanel3.Size = new System.Drawing.Size(200, 200);
+            this.subPanel3.TabIndex = 21;
             // 
-            // panel7
+            // subDetail1
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(28, 641);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(295, 60);
-            this.panel7.TabIndex = 18;
+            this.subDetail1.BackColor = System.Drawing.Color.Transparent;
+            this.subDetail1.Controls.Add(this.subDate1);
+            this.subDetail1.Controls.Add(this.subControl1);
+            this.subDetail1.Location = new System.Drawing.Point(28, 641);
+            this.subDetail1.Name = "subDetail1";
+            this.subDetail1.Size = new System.Drawing.Size(295, 60);
+            this.subDetail1.TabIndex = 18;
             // 
-            // label6
+            // subDate1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label6.Location = new System.Drawing.Point(4, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Date";
+            this.subDate1.AutoSize = true;
+            this.subDate1.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subDate1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.subDate1.Location = new System.Drawing.Point(4, 32);
+            this.subDate1.Name = "subDate1";
+            this.subDate1.Size = new System.Drawing.Size(44, 17);
+            this.subDate1.TabIndex = 16;
+            this.subDate1.Text = "Date";
             // 
-            // label7
+            // subControl1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label7.Location = new System.Drawing.Point(3, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 23);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Control Number";
+            this.subControl1.AutoSize = true;
+            this.subControl1.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subControl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.subControl1.Location = new System.Drawing.Point(3, 9);
+            this.subControl1.Name = "subControl1";
+            this.subControl1.Size = new System.Drawing.Size(178, 23);
+            this.subControl1.TabIndex = 15;
+            this.subControl1.Text = "Control Number";
             // 
-            // panel8
+            // subDetail2
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.label10);
-            this.panel8.Location = new System.Drawing.Point(342, 641);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 60);
-            this.panel8.TabIndex = 19;
+            this.subDetail2.BackColor = System.Drawing.Color.Transparent;
+            this.subDetail2.Controls.Add(this.subDate2);
+            this.subDetail2.Controls.Add(this.subControl2);
+            this.subDetail2.Location = new System.Drawing.Point(342, 641);
+            this.subDetail2.Name = "subDetail2";
+            this.subDetail2.Size = new System.Drawing.Size(200, 60);
+            this.subDetail2.TabIndex = 19;
             // 
-            // label9
+            // subDate2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label9.Location = new System.Drawing.Point(4, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 17);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Date";
+            this.subDate2.AutoSize = true;
+            this.subDate2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subDate2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.subDate2.Location = new System.Drawing.Point(4, 32);
+            this.subDate2.Name = "subDate2";
+            this.subDate2.Size = new System.Drawing.Size(44, 17);
+            this.subDate2.TabIndex = 16;
+            this.subDate2.Text = "Date";
             // 
-            // label10
+            // subControl2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label10.Location = new System.Drawing.Point(3, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(178, 23);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Control Number";
+            this.subControl2.AutoSize = true;
+            this.subControl2.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subControl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.subControl2.Location = new System.Drawing.Point(3, 9);
+            this.subControl2.Name = "subControl2";
+            this.subControl2.Size = new System.Drawing.Size(178, 23);
+            this.subControl2.TabIndex = 15;
+            this.subControl2.Text = "Control Number";
             // 
-            // panel9
+            // subDetail3
             // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.label13);
-            this.panel9.Location = new System.Drawing.Point(559, 641);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 60);
-            this.panel9.TabIndex = 20;
+            this.subDetail3.BackColor = System.Drawing.Color.Transparent;
+            this.subDetail3.Controls.Add(this.subDate3);
+            this.subDetail3.Controls.Add(this.subControl3);
+            this.subDetail3.Location = new System.Drawing.Point(559, 641);
+            this.subDetail3.Name = "subDetail3";
+            this.subDetail3.Size = new System.Drawing.Size(200, 60);
+            this.subDetail3.TabIndex = 20;
             // 
-            // label12
+            // subDate3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label12.Location = new System.Drawing.Point(4, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 17);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Date";
+            this.subDate3.AutoSize = true;
+            this.subDate3.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subDate3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.subDate3.Location = new System.Drawing.Point(4, 32);
+            this.subDate3.Name = "subDate3";
+            this.subDate3.Size = new System.Drawing.Size(44, 17);
+            this.subDate3.TabIndex = 16;
+            this.subDate3.Text = "Date";
             // 
-            // label13
+            // subControl3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.label13.Location = new System.Drawing.Point(3, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(178, 23);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Control Number";
+            this.subControl3.AutoSize = true;
+            this.subControl3.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subControl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.subControl3.Location = new System.Drawing.Point(3, 9);
+            this.subControl3.Name = "subControl3";
+            this.subControl3.Size = new System.Drawing.Size(178, 23);
+            this.subControl3.TabIndex = 15;
+            this.subControl3.Text = "Control Number";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.guna2CustomGradientPanel4);
-            this.panel2.Controls.Add(this.guna2CustomGradientPanel3);
-            this.panel2.Controls.Add(this.guna2CustomGradientPanel2);
+            this.panel2.Controls.Add(this.subDetail3);
+            this.panel2.Controls.Add(this.subDetail2);
+            this.panel2.Controls.Add(this.subDetail1);
+            this.panel2.Controls.Add(this.subPanel3);
+            this.panel2.Controls.Add(this.subPanel2);
+            this.panel2.Controls.Add(this.subPanel1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
             this.panel2.Controls.Add(this.panel3);
@@ -468,6 +468,7 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.exitProgram);
             this.guna2ControlBox2.MouseEnter += new System.EventHandler(this.handCursor);
             this.guna2ControlBox2.MouseLeave += new System.EventHandler(this.defaultCursor);
             // 
@@ -503,12 +504,12 @@
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.upcomingPanel.ResumeLayout(false);
             this.upcomingPanel.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.subDetail1.ResumeLayout(false);
+            this.subDetail1.PerformLayout();
+            this.subDetail2.ResumeLayout(false);
+            this.subDetail2.PerformLayout();
+            this.subDetail3.ResumeLayout(false);
+            this.subDetail3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -529,24 +530,24 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.Panel subDetail3;
+        private System.Windows.Forms.Label subDate3;
+        private System.Windows.Forms.Label subControl3;
+        private System.Windows.Forms.Panel subDetail2;
+        private System.Windows.Forms.Label subDate2;
+        private System.Windows.Forms.Label subControl2;
+        private System.Windows.Forms.Panel subDetail1;
+        private System.Windows.Forms.Label subDate1;
+        private System.Windows.Forms.Label subControl1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel subPanel3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel subPanel2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel subPanel1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Panel upcomingPanel;
         private System.Windows.Forms.Label UpcomingDate;
-        private System.Windows.Forms.Label UpcomingDestination;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label upcomingControlNumber;
+        private System.Windows.Forms.Label upcomingTitleLabel;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;

@@ -145,8 +145,12 @@ namespace Bus_Ticketing
                 }
             }
 
+
+            FormManager.CloseForm(FormManager.book);
+            FormManager.book = new Book();
+
             FormManager.ShowForm(FormManager.receipt);
-            FormManager.HideForm(FormManager.book);
+            
 
         }
         private bool isAccompanied()
@@ -171,20 +175,30 @@ namespace Bus_Ticketing
         }
         private void homeButton_Click(object sender, EventArgs e)
         {
+            
+            FormManager.CloseForm(FormManager.book);
+            FormManager.book = new Book();
+
             FormManager.ShowForm(FormManager.home);
-            FormManager.HideForm(FormManager.book);
         }
         private void ticketsButton_Click(object sender, EventArgs e)
         {
+            FormManager.CloseForm(FormManager.book);
+            FormManager.book = new Book();
+
             FormManager.ShowForm(FormManager.tickets);
-            FormManager.HideForm(FormManager.book);
+           
         }
         private void signOutButton_Click(object sender, EventArgs e)
         {
             User.fullname = "";
             User.id = 0;
+
+            FormManager.CloseForm(FormManager.book);
+            FormManager.book = new Book();
+
             FormManager.ShowForm(FormManager.login);
-            FormManager.HideForm(FormManager.book);
+            
         }
         private void Book_Load(object sender, EventArgs e)
         {

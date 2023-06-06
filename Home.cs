@@ -57,12 +57,11 @@ namespace Bus_Ticketing
 
         public void displayUpcomingTrip()
         {
-            string dateToday = DateTime.Now.ToString("yyyy-MM-dd");
             try
             {
                 string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
-                MySqlCommand SelectCommand = new MySqlCommand($"select * from `bus_data`.`transaction_info` WHERE userid={User.id} order by 6 desc limit 1;", myConn);
+                MySqlCommand SelectCommand = new MySqlCommand($"SELECT * FROM bus_data.transaction_info WHERE date >= CURDATE() AND userid={User.id} AND paid=1 ORDER BY date ASC LIMIT 1;", myConn);
                 MySqlDataReader myReader;
                 myConn.Open();
                 myReader = SelectCommand.ExecuteReader();
@@ -108,14 +107,19 @@ namespace Bus_Ticketing
 
         private void ticketsButton_Click(object sender, EventArgs e)
         {
+            FormManager.CloseForm(FormManager.home);
+            FormManager.home = new Home();
+
             FormManager.ShowForm(FormManager.tickets);
-            FormManager.HideForm(FormManager.home);
+            
         }
 
         private void bookButton_Click(object sender, EventArgs e)
         {
+            FormManager.CloseForm(FormManager.home);
+            FormManager.home = new Home();
+
             FormManager.ShowForm(FormManager.book);
-            FormManager.HideForm(FormManager.home);
         }
         private void Home_Load(object sender, EventArgs e)
         {
@@ -126,8 +130,12 @@ namespace Bus_Ticketing
         {
             User.fullname = "";
             User.id = 0;
+
+            FormManager.CloseForm(FormManager.home);
+            FormManager.home = new Home();
+
             FormManager.ShowForm(FormManager.login);
-            FormManager.HideForm(FormManager.home);
+            
         }
     }
 }

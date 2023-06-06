@@ -78,37 +78,41 @@ namespace Bus_Ticketing
         {
             fullnameText.Text = User.fullname;
             controlNumberLabel.Text = Passenger.controlNumber;
+            controlNumberLabel.Location = new Point((658 / 2) - (controlNumberLabel.Size.Width / 2), 12);
 
             getDataFromSql();
             loadPassengerDetail();
+            showTotalTransactionCharge();
         }
 
         private void bookButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.book);
-            FormManager.HideForm(FormManager.receipt);
+            FormManager.CloseForm(FormManager.receipt);
+            FormManager.receipt = new Receipt();
         }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.home);
-            FormManager.HideForm(FormManager.receipt);
+            FormManager.CloseForm(FormManager.receipt);
+            FormManager.receipt = new Receipt();
         }
 
         private void ticketButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.tickets);
-            FormManager.HideForm(FormManager.receipt);
+            FormManager.CloseForm(FormManager.receipt);
+            FormManager.receipt = new Receipt();
         }
-
         private void signOutButton_Click(object sender, EventArgs e)
         {
             User.fullname = "";
             User.id = 0;
             FormManager.ShowForm(FormManager.login);
-            FormManager.HideForm(FormManager.tickets);
+            FormManager.CloseForm(FormManager.receipt);
+            FormManager.receipt = new Receipt();
         }
-
         private void getDataFromSql()
         {
             try
@@ -148,7 +152,6 @@ namespace Bus_Ticketing
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void loadPassengerDetail()
         {
             try
@@ -194,7 +197,6 @@ namespace Bus_Ticketing
             counter--;
             loadPassengerDetail();
         }
-
         private void nextButton_Click(object sender, EventArgs e)
         {
             if (counter >= allPassengers.Count())
@@ -205,6 +207,57 @@ namespace Bus_Ticketing
 
             counter++;
             loadPassengerDetail();
+        }
+        private void showTotalTransactionCharge()
+        {
+            double total = 0;
+            foreach (Passenger passenger in allPassengers)
+            {
+                double standardProcessingFee = Charge.computeStandardProcessingFee(passenger.From, passenger.To, passenger.Class_);
+                double additionalProcessingFee = Charge.computeAdditionalProcessingFee(passenger.From, passenger.IsRoundtrip, passenger.Class_);
+                double totalDiscount = Charge.computeTotalDiscount(passenger.Age, standardProcessingFee, additionalProcessingFee);
+                double busFee = Charge.computeBusFee(passenger.From, passenger.To, passenger.Class_, passenger.IsRoundtrip);
+                double travelInsurance = Charge.computeInsuranceFee(passenger.Class_, passenger.IsInsurance);
+                double totalProcessingFee = Charge.computeTotalProcessingFee(standardProcessingFee, additionalProcessingFee, totalDiscount);
+
+                total += Charge.computeFinalCharges(busFee, travelInsurance, totalProcessingFee);
+            }
+
+            totalTransactionCharge.Text = total.ToString();
+        }
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            if (payInput == null)
+            {
+                MessageBox.Show("Please input your payment");
+            }
+
+            if (Int32.Parse(payInput.Text) < Int32.Parse(totalTransactionCharge.Text))
+            {
+                MessageBox.Show("Insufficient Payment");
+            }
+
+            try
+            {
+                string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
+                using (MySqlConnection myConn = new MySqlConnection(myConnection))
+                {
+                    string updateQuery = $"UPDATE bus_data.transaction_info SET paid = 0 WHERE ctrlNumber = '{Passenger.controlNumber}' AND userid = {User.id};";
+                    MySqlCommand updateCommand = new MySqlCommand(updateQuery, myConn);
+
+                    myConn.Open();
+                    updateCommand.ExecuteNonQuery();
+                    myConn.Close();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            MessageBox.Show($"Successfully Paid!\nHere is your change {Int32.Parse(totalTransactionCharge.Text) - Int32.Parse(payInput.Text)}");
         }
     }
 }

@@ -25,5 +25,10 @@ namespace Bus_Ticketing
         {
             form.Hide();
         }
+
+        public static void CloseForm(Form form)
+        {
+            form.Close();
+        }
     }
 }

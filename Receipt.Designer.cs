@@ -76,6 +76,11 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.payButton = new Guna.UI2.WinForms.Guna2Button();
+            this.payInput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.totalTransactionCharge = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -86,6 +91,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.prevButton);
             this.panel2.Controls.Add(this.nextButton);
             this.panel2.Controls.Add(this.guna2CustomGradientPanel1);
@@ -143,6 +149,8 @@
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.SystemColors.GrayText;
             this.guna2CustomGradientPanel1.BorderRadius = 30;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
+            this.guna2CustomGradientPanel1.Controls.Add(this.payInput);
+            this.guna2CustomGradientPanel1.Controls.Add(this.payButton);
             this.guna2CustomGradientPanel1.Controls.Add(this.controlNumberLabel);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel1);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
@@ -169,6 +177,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.totalTransactionCharge);
+            this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.roundtripText);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.nameText);
@@ -327,7 +337,7 @@
             this.totalChargeText.AutoSize = true;
             this.totalChargeText.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalChargeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.totalChargeText.Location = new System.Drawing.Point(547, 350);
+            this.totalChargeText.Location = new System.Drawing.Point(547, 322);
             this.totalChargeText.Name = "totalChargeText";
             this.totalChargeText.Size = new System.Drawing.Size(88, 18);
             this.totalChargeText.TabIndex = 53;
@@ -364,7 +374,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label21.Location = new System.Drawing.Point(23, 350);
+            this.label21.Location = new System.Drawing.Point(23, 322);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(116, 17);
             this.label21.TabIndex = 48;
@@ -695,6 +705,79 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 24;
+            this.guna2Button1.Text = "guna2Button1";
+            // 
+            // payButton
+            // 
+            this.payButton.BorderRadius = 15;
+            this.payButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.payButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.payButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.payButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.payButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.payButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payButton.ForeColor = System.Drawing.Color.White;
+            this.payButton.Location = new System.Drawing.Point(389, 507);
+            this.payButton.Name = "payButton";
+            this.payButton.Size = new System.Drawing.Size(128, 36);
+            this.payButton.TabIndex = 2;
+            this.payButton.Text = "Pay";
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
+            // 
+            // payInput
+            // 
+            this.payInput.BorderRadius = 15;
+            this.payInput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.payInput.DefaultText = "";
+            this.payInput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.payInput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.payInput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.payInput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.payInput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.payInput.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.payInput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.payInput.Location = new System.Drawing.Point(148, 507);
+            this.payInput.Name = "payInput";
+            this.payInput.PasswordChar = '\0';
+            this.payInput.PlaceholderText = "Input Payment Here";
+            this.payInput.SelectedText = "";
+            this.payInput.Size = new System.Drawing.Size(200, 36);
+            this.payInput.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Location = new System.Drawing.Point(23, 379);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(224, 17);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Total Transaction Charge";
+            // 
+            // totalTransactionCharge
+            // 
+            this.totalTransactionCharge.AutoSize = true;
+            this.totalTransactionCharge.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTransactionCharge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.totalTransactionCharge.Location = new System.Drawing.Point(547, 378);
+            this.totalTransactionCharge.Name = "totalTransactionCharge";
+            this.totalTransactionCharge.Size = new System.Drawing.Size(88, 18);
+            this.totalTransactionCharge.TabIndex = 66;
+            this.totalTransactionCharge.Text = "59994.00";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,5 +852,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label totalProcessingFeeText;
         private System.Windows.Forms.Label label27;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox payInput;
+        private Guna.UI2.WinForms.Guna2Button payButton;
+        private System.Windows.Forms.Label totalTransactionCharge;
+        private System.Windows.Forms.Label label3;
     }
 }

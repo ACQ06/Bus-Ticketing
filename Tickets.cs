@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Bus_Ticketing
 {
     public partial class Tickets : Form
     {
+        Passenger ticketDetail;
+        List<Passenger> allTickets = new List<Passenger>();
+
         public Tickets()
         {
             InitializeComponent();
@@ -67,13 +71,15 @@ namespace Bus_Ticketing
         private void homeButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.home);
-            FormManager.HideForm(FormManager.tickets);
+            FormManager.CloseForm(FormManager.tickets);
+            FormManager.tickets = new Tickets();
         }
 
         private void bookButton_Click(object sender, EventArgs e)
         {
             FormManager.ShowForm(FormManager.book);
-            FormManager.HideForm(FormManager.tickets);
+            FormManager.CloseForm(FormManager.tickets);
+            FormManager.tickets = new Tickets();
         }
 
         private void signOutButton_Click(object sender, EventArgs e)
@@ -81,12 +87,114 @@ namespace Bus_Ticketing
             User.fullname = "";
             User.id = 0;
             FormManager.ShowForm(FormManager.login);
-            FormManager.HideForm(FormManager.tickets);
+            FormManager.CloseForm(FormManager.tickets);
+            FormManager.tickets = new Tickets();
         }
 
         private void Tickets_Load(object sender, EventArgs e)
         {
             fullnameText.Text = User.fullname;
+            SetUpcomingTrips();
+        }
+
+        private void exitProgram(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SetUpcomingTrips()
+        {
+            Get4ClosestTrips();
+
+            upcomingTitleLabel.Text = "No upcoming trips";
+            upcomingControlNumber.Hide();
+            UpcomingDate.Hide();
+
+            subPanel1.Hide();
+            subPanel2.Hide();
+            subPanel3.Hide();
+
+            subDetail1.Hide();
+            subDetail2.Hide();
+            subDetail3.Hide();
+
+            if (allTickets.Count() < 1)
+            {
+                return;
+            }
+
+            upcomingTitleLabel.Text = "Upcoming trip";
+            upcomingControlNumber.Text = allTickets[0].CtrlNumber;
+            UpcomingDate.Text = allTickets[0].Date;
+
+            upcomingControlNumber.Show();
+            UpcomingDate.Show();
+
+            if (allTickets.Count() < 2)
+            {
+                return;
+            }
+
+            subControl1.Text = allTickets[1].CtrlNumber;
+            subDate1.Text = allTickets[1].Date;
+
+            subPanel1.Show();
+            subDetail1.Show();
+
+            if (allTickets.Count() < 3)
+            {
+                return;
+            }
+
+            subControl2.Text = allTickets[2].CtrlNumber;
+            subDate2.Text = allTickets[2].Date;
+
+            subPanel2.Show();
+            subDetail2.Show();
+
+            if (allTickets.Count() < 4)
+            {
+                return;
+            }
+
+            subControl3.Text = allTickets[3].CtrlNumber;
+            subDate3.Text = allTickets[3].Date;
+
+            subPanel3.Show();
+            subDetail3.Show();
+        }
+
+        private void Get4ClosestTrips()
+        {
+            try
+            {
+                string myConnection = "datasource=127.0.0.1; port=3306; username=root; database=bus_data; password=";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlCommand SelectCommand = new MySqlCommand($"SELECT * FROM bus_data.transaction_info WHERE date >= CURDATE() AND userid={User.id} AND paid=1 ORDER BY date ASC LIMIT 4;", myConn);
+                MySqlDataReader myReader;
+                myConn.Open();
+                myReader = SelectCommand.ExecuteReader();
+
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        ticketDetail = new Passenger();
+
+                        ticketDetail.CtrlNumber = myReader.GetString("ctrlNumber");
+                        ticketDetail.Date = myReader.GetMySqlDateTime("date").ToString();
+
+                        allTickets.Add(ticketDetail);
+
+                    }
+                }
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
