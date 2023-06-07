@@ -102,7 +102,7 @@ namespace Bus_Ticketing
                 string myConnection = "datasource=127.0.0.1; port=3306; username=root; password=";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand InsertCommand = myConn.CreateCommand();
-                InsertCommand.CommandText = "INSERT INTO bus_data.user_info(fullname,email,password)VALUES ('" + fullname + "','" + email + "','" + password + "')";
+                InsertCommand.CommandText = $"INSERT INTO bus_data.user_info(fullname,email,password)VALUES ('{fullname}','{email}','{password}')";
                 myConn.Open();
                 InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Record Saved!");

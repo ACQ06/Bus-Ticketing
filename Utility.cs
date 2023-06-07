@@ -320,7 +320,7 @@ namespace Bus_Ticketing
         /// </summary>
         /// <param name="busType">Bus class</param>
         /// <returns>Insurance</returns>
-        public static double computeInsuranceFee(char busType, bool isInsured)
+        public static double computeInsuranceFee(char busType, bool isInsured, bool IsRoundtrip)
         {
             double insuranceFee = 0;
 
@@ -348,8 +348,7 @@ namespace Bus_Ticketing
                     break;
             }
 
-
-            return insuranceFee;
+            return IsRoundtrip? insuranceFee*2:insuranceFee;
         }
 
         /// <summary>

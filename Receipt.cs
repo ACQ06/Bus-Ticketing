@@ -168,7 +168,7 @@ namespace Bus_Ticketing
                 double additionalProcessingFee = Charge.computeAdditionalProcessingFee(allPassengers[counter].From, allPassengers[counter].IsRoundtrip, allPassengers[counter].Class_);
                 double totalDiscount = Charge.computeTotalDiscount(allPassengers[counter].Age, standardProcessingFee, additionalProcessingFee);
                 double totalProcessingFee = Charge.computeTotalProcessingFee(standardProcessingFee, additionalProcessingFee, totalDiscount);
-                double travelInsurance = Charge.computeInsuranceFee(allPassengers[counter].Class_, allPassengers[counter].IsInsurance);
+                double travelInsurance = Charge.computeInsuranceFee(allPassengers[counter].Class_, allPassengers[counter].IsInsurance, allPassengers[counter].IsRoundtrip);
                 double totalCharge = Charge.computeFinalCharges(busFee, travelInsurance, totalProcessingFee);
 
 
@@ -217,7 +217,7 @@ namespace Bus_Ticketing
                 double additionalProcessingFee = Charge.computeAdditionalProcessingFee(passenger.From, passenger.IsRoundtrip, passenger.Class_);
                 double totalDiscount = Charge.computeTotalDiscount(passenger.Age, standardProcessingFee, additionalProcessingFee);
                 double busFee = Charge.computeBusFee(passenger.From, passenger.To, passenger.Class_, passenger.IsRoundtrip);
-                double travelInsurance = Charge.computeInsuranceFee(passenger.Class_, passenger.IsInsurance);
+                double travelInsurance = Charge.computeInsuranceFee(passenger.Class_, passenger.IsInsurance, passenger.IsRoundtrip);
                 double totalProcessingFee = Charge.computeTotalProcessingFee(standardProcessingFee, additionalProcessingFee, totalDiscount);
 
                 total += Charge.computeFinalCharges(busFee, travelInsurance, totalProcessingFee);
