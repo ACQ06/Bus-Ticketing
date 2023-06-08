@@ -83,6 +83,7 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label13 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.insurancePanel.SuspendLayout();
@@ -92,11 +93,12 @@
             this.passDetailsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.guna2ControlBox2);
             this.panel3.Controls.Add(this.guna2ControlBox1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -110,6 +112,7 @@
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
             this.guna2ControlBox2.HoverState.IconColor = System.Drawing.Color.White;
@@ -125,6 +128,7 @@
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
@@ -137,6 +141,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.panel2.Controls.Add(this.countD);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.countC);
@@ -226,7 +231,7 @@
             // 
             this.countA.AutoSize = true;
             this.countA.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countA.Location = new System.Drawing.Point(106, 53);
+            this.countA.Location = new System.Drawing.Point(106, 52);
             this.countA.Name = "countA";
             this.countA.Size = new System.Drawing.Size(98, 17);
             this.countA.TabIndex = 47;
@@ -278,12 +283,12 @@
             this.addButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.addButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.addButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.White;
             this.addButton.Image = ((System.Drawing.Image)(resources.GetObject("addButton.Image")));
             this.addButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.addButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.addButton.ImageSize = new System.Drawing.Size(14, 15);
             this.addButton.Location = new System.Drawing.Point(448, 678);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(147, 37);
@@ -299,12 +304,12 @@
             this.payButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.payButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.payButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.payButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.payButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.payButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payButton.ForeColor = System.Drawing.Color.White;
             this.payButton.Image = ((System.Drawing.Image)(resources.GetObject("payButton.Image")));
             this.payButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.payButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.payButton.ImageSize = new System.Drawing.Size(20, 15);
             this.payButton.Location = new System.Drawing.Point(615, 678);
             this.payButton.Name = "payButton";
             this.payButton.Size = new System.Drawing.Size(147, 37);
@@ -597,6 +602,7 @@
             // 
             // passDetailsPanel
             // 
+            this.passDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.passDetailsPanel.Controls.Add(this.ageInput);
             this.passDetailsPanel.Controls.Add(this.lastnameInput);
             this.passDetailsPanel.Controls.Add(this.firstnameInput);
@@ -608,6 +614,10 @@
             this.passDetailsPanel.Controls.Add(this.label8);
             this.passDetailsPanel.Controls.Add(this.label9);
             this.passDetailsPanel.Controls.Add(this.label7);
+            this.passDetailsPanel.FillColor = System.Drawing.Color.Transparent;
+            this.passDetailsPanel.FillColor2 = System.Drawing.Color.Transparent;
+            this.passDetailsPanel.FillColor3 = System.Drawing.Color.Transparent;
+            this.passDetailsPanel.FillColor4 = System.Drawing.Color.Transparent;
             this.passDetailsPanel.Location = new System.Drawing.Point(28, 420);
             this.passDetailsPanel.Name = "passDetailsPanel";
             this.passDetailsPanel.Size = new System.Drawing.Size(744, 238);
@@ -853,10 +863,10 @@
             this.ticketsButton.FillColor = System.Drawing.Color.Transparent;
             this.ticketsButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.ticketsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.ticketsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.ticketsButton.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.ticketsButton.Image = ((System.Drawing.Image)(resources.GetObject("ticketsButton.Image")));
-            this.ticketsButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.ticketsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ticketsButton.Location = new System.Drawing.Point(12, 265);
             this.ticketsButton.Name = "ticketsButton";
             this.ticketsButton.Size = new System.Drawing.Size(221, 36);
@@ -876,10 +886,10 @@
             this.homeButton.FillColor = System.Drawing.Color.Transparent;
             this.homeButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.homeButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.homeButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.homeButton.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
-            this.homeButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.homeButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.homeButton.Location = new System.Drawing.Point(12, 194);
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(221, 36);
@@ -895,12 +905,11 @@
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.guna2Button4.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
             this.guna2Button4.Location = new System.Drawing.Point(12, 109);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(221, 50);
@@ -918,8 +927,9 @@
             this.signOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.signOutButton.FillColor = System.Drawing.Color.Transparent;
             this.signOutButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
-            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
+            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.signOutButton.Location = new System.Drawing.Point(12, 678);
             this.signOutButton.Name = "signOutButton";
             this.signOutButton.Size = new System.Drawing.Size(221, 37);
@@ -930,6 +940,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.label13);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(512, 29);
@@ -942,6 +953,18 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(10, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(128, 18);
+            this.label13.TabIndex = 54;
+            this.label13.Text = "SUPER LINEES";
             // 
             // Book
             // 
@@ -972,6 +995,8 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1031,5 +1056,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label countA;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label13;
     }
 }

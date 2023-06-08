@@ -68,6 +68,7 @@
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -77,10 +78,12 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
@@ -395,7 +398,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.guna2ControlBox2);
             this.panel3.Controls.Add(this.guna2ControlBox1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -449,6 +452,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.ticketsButton);
             this.panel1.Controls.Add(this.guna2Button1);
@@ -497,10 +501,10 @@
             this.ticketsButton.FillColor = System.Drawing.Color.Transparent;
             this.ticketsButton.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.ticketsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.ticketsButton.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.ticketsButton.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.ticketsButton.Image = ((System.Drawing.Image)(resources.GetObject("ticketsButton.Image")));
-            this.ticketsButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.ticketsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.ticketsButton.Location = new System.Drawing.Point(12, 265);
             this.ticketsButton.Name = "ticketsButton";
             this.ticketsButton.Size = new System.Drawing.Size(221, 36);
@@ -519,11 +523,11 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Courier New", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.guna2Button1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.Location = new System.Drawing.Point(12, 194);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(221, 36);
@@ -538,12 +542,11 @@
             this.bookButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bookButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bookButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(104)))), ((int)(((byte)(232)))));
+            this.bookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.bookButton.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookButton.ForeColor = System.Drawing.Color.White;
             this.bookButton.Image = ((System.Drawing.Image)(resources.GetObject("bookButton.Image")));
             this.bookButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.bookButton.ImageSize = new System.Drawing.Size(15, 15);
             this.bookButton.Location = new System.Drawing.Point(12, 109);
             this.bookButton.Name = "bookButton";
             this.bookButton.Size = new System.Drawing.Size(221, 50);
@@ -562,8 +565,9 @@
             this.signOutButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.signOutButton.FillColor = System.Drawing.Color.Transparent;
             this.signOutButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold);
-            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
+            this.signOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.signOutButton.Location = new System.Drawing.Point(12, 678);
             this.signOutButton.Name = "signOutButton";
             this.signOutButton.Size = new System.Drawing.Size(221, 37);
@@ -573,7 +577,8 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(512, 29);
@@ -586,6 +591,18 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(10, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 18);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "SUPER LINEES";
             // 
             // Home
             // 
@@ -616,6 +633,8 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -660,5 +679,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

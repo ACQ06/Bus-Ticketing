@@ -160,11 +160,11 @@
             this.signUpButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.signUpButton.FillColor = System.Drawing.Color.Transparent;
             this.signUpButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.signUpButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.signUpButton.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.signUpButton.Image = ((System.Drawing.Image)(resources.GetObject("signUpButton.Image")));
             this.signUpButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.signUpButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.signUpButton.ImageSize = new System.Drawing.Size(10, 15);
             this.signUpButton.Location = new System.Drawing.Point(151, 480);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(150, 40);
@@ -237,7 +237,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.label7.Location = new System.Drawing.Point(123, 460);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(206, 17);
@@ -249,12 +249,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.label5.Location = new System.Drawing.Point(8, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(300, 36);
+            this.label5.Size = new System.Drawing.Size(243, 36);
             this.label5.TabIndex = 8;
-            this.label5.Text = "SUPER LINEEEEES";
+            this.label5.Text = "SUPER LINEES";
             // 
             // label1
             // 
@@ -277,7 +277,7 @@
             this.loginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.loginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.loginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.loginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.loginButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.loginButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.Location = new System.Drawing.Point(12, 348);
@@ -291,7 +291,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
             this.label2.Location = new System.Drawing.Point(11, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(422, 17);

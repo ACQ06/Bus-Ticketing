@@ -170,10 +170,10 @@
             this.loginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.loginButton.FillColor = System.Drawing.Color.Transparent;
             this.loginButton.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.loginButton.Image = ((System.Drawing.Image)(resources.GetObject("loginButton.Image")));
             this.loginButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.loginButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.loginButton.ImageSize = new System.Drawing.Size(10, 15);
             this.loginButton.Location = new System.Drawing.Point(147, 492);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(150, 40);
@@ -254,7 +254,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.label5.Location = new System.Drawing.Point(8, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(300, 36);
@@ -282,7 +282,7 @@
             this.signUpButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.signUpButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.signUpButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.signUpButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this.signUpButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.signUpButton.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
             this.signUpButton.ForeColor = System.Drawing.Color.White;
             this.signUpButton.Location = new System.Drawing.Point(14, 388);
