@@ -112,9 +112,12 @@ namespace Bus_Ticketing
                 emailInput.Clear();
                 passwordInput.Clear();
 
-                loginForm login = (loginForm)this.Owner;
-                login.Show();
-                this.Close();
+                FormManager.CloseForm(FormManager.signUp);
+                FormManager.signUp = new SignUpForm();
+
+                FormManager.ShowForm(FormManager.login);
+
+                
             }
 
             catch (Exception s)

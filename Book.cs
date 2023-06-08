@@ -157,21 +157,22 @@ namespace Bus_Ticketing
         }
         private bool isAccompanied()
         {
-            int childCount = 0;
-            int adultCount = 0;
-
             foreach(Passenger passenger in allPassenger)
             {
                 if (passenger.Age < 18) {
-                    childCount++;
-                    continue;
+
+                    foreach(Passenger passenger2 in allPassenger)
+                    {
+                        if (passenger2.Age >= 18)
+                        {
+                            if ((passenger2.To == passenger.To) && (passenger2.From == passenger.From))
+                            {
+                                return true;
+                            }
+                        }
+                    }            
                 }
-                adultCount++;
             }
-
-            if(childCount == 0) return true;
-
-            if (adultCount > 0) return true;
 
             return false;
         }

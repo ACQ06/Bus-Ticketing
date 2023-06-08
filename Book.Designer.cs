@@ -82,8 +82,8 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label13 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.insurancePanel.SuspendLayout();
@@ -949,11 +949,6 @@
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseMove);
             this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseUp);
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -965,6 +960,11 @@
             this.label13.Size = new System.Drawing.Size(128, 18);
             this.label13.TabIndex = 54;
             this.label13.Text = "SUPER LINEES";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // Book
             // 

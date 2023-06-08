@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tickets));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.signOutButton = new Guna.UI2.WinForms.Guna2Button();
             this.bookButton = new Guna.UI2.WinForms.Guna2Button();
             this.homeButton = new Guna.UI2.WinForms.Guna2Button();
@@ -62,7 +63,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -86,6 +86,18 @@
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseMove);
             this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controlbar_MouseUp);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(10, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 18);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "SUPER LINEES";
             // 
             // signOutButton
             // 
@@ -489,18 +501,6 @@
             this.guna2ControlBox1.TabIndex = 0;
             this.guna2ControlBox1.MouseEnter += new System.EventHandler(this.handCursor);
             this.guna2ControlBox1.MouseLeave += new System.EventHandler(this.defaultCursor);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(10, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 18);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "SUPER LINEES";
             // 
             // Tickets
             // 
